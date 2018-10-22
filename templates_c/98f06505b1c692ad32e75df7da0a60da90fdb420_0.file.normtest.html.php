@@ -1,18 +1,24 @@
 <?php
+
 /* Smarty version 3.1.33, created on 2018-10-22 12:09:01
+
   from 'D:\xampp\htdocs\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+
   'unifunc' => 'content_5bcda1bde81292_96155257',
+
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98f06505b1c692ad32e75df7da0a60da90fdb420' => 
     array (
       0 => 'D:\\xampp\\htdocs\\ilearning\\templates\\normtest.html',
+
       1 => 1540202941,
+
       2 => 'file',
     ),
   ),
@@ -20,7 +26,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+
 function content_5bcda1bde81292_96155257 (Smarty_Internal_Template $_smarty_tpl) {
+
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +51,9 @@ function content_5bcda1bde81292_96155257 (Smarty_Internal_Template $_smarty_tpl)
     <title>常模測驗</title>
 </head>
 <body>
+
 	<!-- 登入後資訊區 navbar-->
+
 	<div class="navbar navbar-inverse">
 		<div class="container-fluid">
     		<div class="navbar-header">
@@ -57,7 +67,9 @@ function content_5bcda1bde81292_96155257 (Smarty_Internal_Template $_smarty_tpl)
 
 
 	</div>
+
 	<!-- 題目及測驗整體 zone-->
+
 	<div id="test_zone" class="container text-center">		
 		<!-- 題號區 -->
 		<div class="container">
@@ -66,7 +78,9 @@ function content_5bcda1bde81292_96155257 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 		<!-- 音檔播放區 -->
 	    <div class="container" style="display: flex; justify-content: center; ">
+
 	    	<audio id="audio" src="" controls="controls" controlsList="nodownload" oncontextmenu="return false">
+
 	    	</audio>
 	    </div>
 	    <!-- 選擇區 -->
@@ -96,7 +110,9 @@ function content_5bcda1bde81292_96155257 (Smarty_Internal_Template $_smarty_tpl)
 	    
 	</div>
 	
+
     <!-- 測驗結束後 zone -->
+
     <div id="thank_zone" class="container" style="display: none; ">
     	<!-- 作答情形區 -->
     	<div class="container col-sm-3 text-center">

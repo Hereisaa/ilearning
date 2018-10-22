@@ -17,10 +17,10 @@ var  thank_zone,
 	result_tbody,
 	true_false_table = {
 		"student":"tester",
+
 		"email":"vvv@gmail.com",
 		"result":[null,null,null,null,null,null,null,null,null,null]
 	};
-
 
 
 window.onload = function(){	
@@ -97,19 +97,22 @@ function update_content(){
 
 	// 題目區。更新
 	if (num<=4) {
+
 		question_type.innerHTML = question_json1.question_type[0];
 	}else{
 		question_type.innerHTML = question_json1.question_type[1];
-	}
+
 	
 
 	// 測驗區。更新
 	question_num.innerHTML=num;
+
 	option_a.innerHTML=question_json1.question[num-1].A;
 	option_b.innerHTML=question_json1.question[num-1].B;
 	option_c.innerHTML=question_json1.question[num-1].C;
 	option_d.innerHTML=question_json1.question[num-1].D;
 	audio.src = "templates/audio/normtest/unitsound/"+question_json1.question[num-1].mp3;	
+
 
 }
 
@@ -123,7 +126,9 @@ function result(){
 
 		cell1.innerHTML = "Q"+(i+1).toString();
 		cell2.innerHTML = answer_array[i];
+
 		cell3.innerHTML = question_json1.answer[i];
+
 
 		// 輸出結果
 		if(cell2.innerHTML==cell3.innerHTML)
@@ -132,14 +137,14 @@ function result(){
 			output_true_false_table(i,0);
 		
 	}
+
 	// alert最後結果 0或1
 	alert(true_false_table.result);
-}
+
 
 
 function output_true_false_table(i,x){
 	true_false_table.result[i]=x;
-}
 
 
 // 假題庫
@@ -173,3 +178,4 @@ var question_json1 ={
 	"answer":["B","A","D","D","B","A","C","B","B","C"]
 
 };
+
