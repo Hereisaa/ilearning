@@ -24,17 +24,13 @@
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<div class="navbar navbar-inverse">
-		<div class="container-fluid">
-    		<div class="navbar-header">
-      			<a class="navbar-brand" >Language Test</a>
-    		</div>
-    		<ul class="nav navbar-nav navbar-right">
-      			<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      			<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    		</ul>
-  		</div>
-  	</div>
+	<ul id="navbar_ul">
+		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
+		<li id="navbar_li" style="float:right"><a href="info.php" >說明</a></li>
+		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
+		<li id="navbar_li" style="float:right"><a href="{$login}.php" >{$login}</a></li>
+	</ul>
+	
 	<!-- 題前提示 -->
 	<div class="container text-center" id="pre_page">
 		<div class="row">

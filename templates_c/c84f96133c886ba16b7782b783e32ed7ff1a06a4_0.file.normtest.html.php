@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-24 11:02:46
+/* Smarty version 3.1.33, created on 2018-10-24 15:26:54
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd035369ff678_67390317',
+  'unifunc' => 'content_5bd0731e5b8200_03766493',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84f96133c886ba16b7782b783e32ed7ff1a06a4' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
-      1 => 1540371109,
+      1 => 1540387612,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd035369ff678_67390317 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd0731e5b8200_03766493 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,17 +57,15 @@ function content_5bd035369ff678_67390317 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<div class="navbar navbar-inverse">
-		<div class="container-fluid">
-    		<div class="navbar-header">
-      			<a class="navbar-brand" >Language Test</a>
-    		</div>
-    		<ul class="nav navbar-nav navbar-right">
-      			<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      			<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    		</ul>
-  		</div>
-  	</div>
+	<ul id="navbar_ul">
+		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
+		<li id="navbar_li" style="float:right"><a href="info.php" >說明</a></li>
+		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
+		<li id="navbar_li" style="float:right"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+.php" ><?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+</a></li>
+	</ul>
+	
 	<!-- 題前提示 -->
 	<div class="container text-center" id="pre_page">
 		<div class="row">
