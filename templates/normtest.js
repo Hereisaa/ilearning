@@ -49,15 +49,6 @@ var thank_zone,
 	},
 	correct_answer_array = ["B","A","D","D","B","A","C","B","B","C","A","C","D","A","B","C","B","D","A","C","B","C","A","D","A","C","B","D"];
 
-<<<<<<< HEAD
-
-var element_count = 0;
-
-// 假題庫
-var question_json ={
-	"question_type":["一、 Nghe và chọn: 選出正確的單元音","一、 Nghe và chọn: 選出正確的讀音"],
-=======
->>>>>>> aa8ad666fb998b25ed077c76f6c5f5eeebed941c
 
 
 window.onload = function(){	
@@ -280,51 +271,16 @@ function result(){
 		else 
 			output_true_false_table(i,0);
 	}
-<<<<<<< HEAD
-	
-	//alert(true_false_table.result);
-=======
 	correct_num.innerHTML = correct;
 	// alert最後結果 0或1
 	alert(true_false_table.result);
->>>>>>> aa8ad666fb998b25ed077c76f6c5f5eeebed941c
 }
-
-
 
 
 function output_true_false_table(i,x){
 	true_false_table.result[i]=x;
 }
 
-<<<<<<< HEAD
-
-
-// 生成隱藏的POST表單給 export_excel.php
-function add_element(obj){
-	for(var i=0; i<answer_array.length; i++){
-
-		element_count++;
-		//先建立一個input的tag
-		var new_element = document.createElement("input");
-
-		//設定這個input的屬性
-		new_element.type = "text";
-		new_element.name = "Q" + element_count;
-		new_element.value = true_false_table.result[i];
-		//new_element.style = "display: none";
-		
-		//最後再使用appendChild加到要加的form裡
-		obj.form.appendChild(new_element);
-		//換行
-		var s = document.createElement("br");
-		obj.form.appendChild(s);
-	}
-
-	document.getElementById("myform").action = "../export_excel.php";
-	document.getElementById("myform").submit();
-}
-=======
 function example_clickoption(option) {
 	// body...
 	example_choosen_option.innerHTML = option;
@@ -335,6 +291,40 @@ function example_commit(){
 	example_commit_btn.setAttribute('disabled','');
 }
 
+
+// 生成隱藏的POST表單給 export_excel.php
+function add_element(obj){
+	var element_count = 0;
+	for(var i=0; i<answer_array.length+1; i++){
+		var new_element = document.createElement("input");
+		element_count++;
+		//設定這個input的屬性
+		if(i != answer_array.length){
+			new_element.type = "text";
+			new_element.name = "Q" + element_count;
+			new_element.value = true_false_table.result[i];
+			//new_element.style = "display: none";
+		}
+		else{
+			// question number
+			new_element.type = "text";
+			new_element.name = "q_num";
+			new_element.value = answer_array.length;
+			//new_element.style = "display: none";
+		}
+		
+		
+		//最後再使用appendChild加到要加的form裡
+		obj.form.appendChild(new_element);
+		//換行
+		var s = document.createElement("br");
+		obj.form.appendChild(s);
+	}
+
+	document.getElementById("myform").action = "../export_excel.php";
+	document.getElementById("myform").submit();
+	
+}
 
 
 // 假題庫 part1
@@ -446,4 +436,3 @@ var question_json3 = {
 	"answer":["B","C","A","D","A","C","B","D"]
 };
 
->>>>>>> aa8ad666fb998b25ed077c76f6c5f5eeebed941c
