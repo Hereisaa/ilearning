@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-22 16:40:29
+/* Smarty version 3.1.33, created on 2018-10-24 10:33:06
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bcde15d895a28_60092245',
+  'unifunc' => 'content_5bd02e42b162e2_35506138',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84f96133c886ba16b7782b783e32ed7ff1a06a4' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
-      1 => 1540218767,
+      1 => 1540369975,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcde15d895a28_60092245 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd02e42b162e2_35506138 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,6 +37,12 @@ function content_5bcde15d895a28_60092245 (Smarty_Internal_Template $_smarty_tpl)
 >
 	<?php echo '<script'; ?>
  type="text/javascript" src="templates/normtest.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="templates/export_xls.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"><?php echo '</script'; ?>
 >
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
 
@@ -145,13 +151,21 @@ function content_5bcde15d895a28_60092245 (Smarty_Internal_Template $_smarty_tpl)
 	    				<th>YourAnswer</th>
 	    				<th>CorrectAnswer</th>
 	    			</tr>
-	    		</thead>
+				</thead>
+				
 	    		<tbody id="result_tbody">
 	    			
-	    		</tbody>
-    		</table>
-    		<!-- 回到index.html -->
-    		<button type="button" onclick="location.href='normtest.php'" class="btn btn-primary" >回常模測試主頁</button>
+				</tbody>
+				
+			</table>
+
+			<button type="button" onclick="location.href='normtest.php'" class="btn btn-primary" >回常模測試主頁</button>
+
+			<!-- 回到index.html -->
+			<form id="myform" method="POST">
+				<input type="button" value="確認" onclick="add_element(this);" ><br />
+			</form>
+    		
     	</div>
     </div>
 </body>

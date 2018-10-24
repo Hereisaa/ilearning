@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="templates/normtest.js"></script>
+	<script type="text/javascript" src="templates/export_xls.js"></script>
+	<script type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
 
 	<title>常模測驗</title>
@@ -114,13 +116,21 @@
 	    				<th>YourAnswer</th>
 	    				<th>CorrectAnswer</th>
 	    			</tr>
-	    		</thead>
+				</thead>
+				
 	    		<tbody id="result_tbody">
 	    			
-	    		</tbody>
-    		</table>
-    		<!-- 回到index.html -->
-    		<button type="button" onclick="location.href='normtest.php'" class="btn btn-primary" >回常模測試主頁</button>
+				</tbody>
+				
+			</table>
+
+			<button type="button" onclick="location.href='normtest.php'" class="btn btn-primary" >回常模測試主頁</button>
+
+			<!-- 回到index.html -->
+			<form id="myform" method="POST">
+				<input type="button" value="確認" onclick="add_element(this);" ><br />
+			</form>
+    		
     	</div>
     </div>
 </body>

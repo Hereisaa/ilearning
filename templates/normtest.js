@@ -13,13 +13,16 @@ var num ,
 	choosen_option,
 	commit_btn;
 //測驗結束後變數
-var  thank_zone,
+var thank_zone,
 	result_tbody,
 	true_false_table = {
 		"student":"tester",
 		"no":"M06300000",
 		"result":[null,null,null,null,null,null,null,null,null,null]
 	};
+
+
+var element_count = 0;
 
 // 假題庫
 var question_json ={
@@ -161,10 +164,38 @@ function result(){
 			output_true_false_table(i,0);
 		
 	}
+	
 	//alert(true_false_table.result);
 }
 
 
 function output_true_false_table(i,x){
 	true_false_table.result[i]=x;
+}
+
+
+
+// 生成隱藏的POST表單給 export_excel.php
+function add_element(obj){
+	for(var i=0; i<answer_array.length; i++){
+
+		element_count++;
+		//先建立一個input的tag
+		var new_element = document.createElement("input");
+
+		//設定這個input的屬性
+		new_element.type = "text";
+		new_element.name = "Q" + element_count;
+		new_element.value = true_false_table.result[i];
+		//new_element.style = "display: none";
+		
+		//最後再使用appendChild加到要加的form裡
+		obj.form.appendChild(new_element);
+		//換行
+		var s = document.createElement("br");
+		obj.form.appendChild(s);
+	}
+
+	document.getElementById("myform").action = "../export_excel.php";
+	document.getElementById("myform").submit();
 }
