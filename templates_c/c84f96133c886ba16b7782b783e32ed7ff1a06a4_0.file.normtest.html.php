@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-24 15:26:54
+/* Smarty version 3.1.33, created on 2018-10-26 10:08:13
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd0731e5b8200_03766493',
+  'unifunc' => 'content_5bd2cb6dc3ade2_77262048',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84f96133c886ba16b7782b783e32ed7ff1a06a4' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
-      1 => 1540387612,
+      1 => 1540541289,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd0731e5b8200_03766493 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -194,27 +194,31 @@ function content_5bd0731e5b8200_03766493 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 		   	<!-- 題目選擇區 -->
 		   	<div class="container col-sm-8">
-		   		<div class="container col-sm-4 text-center" style="justify-content: center;"> 
-		   			<h3><strong id="part2_question"></strong></h3>
-		   			<h2 ><strong id="part2_question_content"> </strong></h2>
-		   		</div>
-		   		<div class="container col-sm-4" style="padding-top: 15px">
-		   			<div class="row" style="padding-top: 10px">
-		   				<button class="btn" id="part2_option_a" onclick="clickoption('A')"><strong>A</strong><audio id="part2_audio_a" src="" controls="controls" controlsList="nodownload"></audio></button>
-		   			</div>
-					
+				<div class="container col-sm-4 text-center" style="justify-content: center;"> 
+					<h3><strong id="part2_question"></strong></h3>
+					<h2 ><strong id="part2_question_content"> </strong></h2>
+				</div>
+				<div class="container col-sm-8" style="padding-top: 15px">
 					<div class="row" style="padding-top: 10px">
-						<button class="btn" id="part2_option_b" onclick="clickoption('B')"><strong>B</strong><audio id="part2_audio_b" src="" controls="controls" controlsList="nodownload"></audio></button>
+						<button class="btn align-top" id="part2_option_a" onclick="clickoption('A')" ><strong>A</strong></button>
+						<audio id="part2_audio_a" src="" controls="controls" onclick="clickoption('A')" controlsList="nodownload" style="vertical-align: middle;"></audio>
 					</div>
-					<div class="row" style="padding-top: 10px">
-						<button class="btn" id="part2_option_c" onclick="clickoption('C')"><strong>C</strong><audio id="part2_audio_c" src="" controls="controls" controlsList="nodownload"></audio></button>
-					</div>
-		    	
-		    		<div class="row" style="padding-top: 10px">
-		    			<button class="btn" id="part2_option_d" onclick="clickoption('D')"><strong>D</strong><audio id="part2_audio_d" src="" controls="controls" controlsList="nodownload"></audio></button>
-		    		</div>
-		   		</div>
-		    </div>	
+				 
+				 <div class="row" style="padding-top: 10px">
+					 <button class="btn align-top" id="part2_option_b" onclick="clickoption('B')" ><strong>B</strong></button>
+					 <audio id="part2_audio_b" src="" controls="controls" onclick="clickoption('B')" controlsList="nodownload" style="vertical-align: middle;"></audio>
+				 </div>
+				 <div class="row" style="padding-top: 10px">
+					 <button class="btn align-top" id="part2_option_b" onclick="clickoption('C')" ><strong>C</strong></button>
+					 <audio id="part2_audio_c" src="" controls="controls" onclick="clickoption('C')" controlsList="nodownload" style="vertical-align: middle;"></audio>
+				 </div>
+			 
+				 <div class="row" style="padding-top: 10px">
+					 <button class="btn align-top" id="part2_option_b" onclick="clickoption('D')" ><strong>D</strong></button>
+					 <audio id="part2_audio_d" src="" controls="controls" onclick="clickoption('D')" controlsList="nodownload" style="vertical-align: middle;"></audio>
+				 </div>
+				</div>
+			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
 	    		<div class="row" style="font-size: 50px"><strong> <span id="part2_choosen_option" ></span>　</strong></div>
@@ -255,11 +259,11 @@ function content_5bd0731e5b8200_03766493 (Smarty_Internal_Template $_smarty_tpl)
 				
 			</table>
 
-			<button type="button" onclick="location.href='normtest.php'" class="btn btn-primary" >回常模測試主頁</button>
+			
 
 			<!-- 回到index.html -->
 			<form id="myform" method="POST">
-				<input type="button" value="確認" onclick="add_element(this);" ><br />
+				<input type="button" value="回常模測試主頁" class="btn btn-primary" onclick="add_element(this);" ><br />
 			</form>
     		
     	</div>

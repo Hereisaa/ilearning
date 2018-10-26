@@ -24,7 +24,7 @@
         'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 
         'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ'); 
 
-    $file = "test/test2.xlsx";
+    $file = "test/TestResult.xlsx";
     $file = iconv("utf-8", "gb2312", $file);
 
     if(empty($file) OR !file_exists($file)) {  
@@ -47,7 +47,7 @@
 
         // 建立.xlsx
         $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
-        $objWrite->save("test/test2.xlsx");
+        $objWrite->save("test/TestResult.xlsx");
     } 
     
     else{
@@ -73,9 +73,9 @@
         }
 
         $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
-        $objWrite->save("test/test2.xlsx");
+        $objWrite->save("test/TestResult.xlsx");
 
     }
 
-    header("Location: index.php");
+    header("Location: normtest.php");
 ?>
