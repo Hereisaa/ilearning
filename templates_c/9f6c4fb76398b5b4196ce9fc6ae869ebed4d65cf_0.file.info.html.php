@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-22 17:20:06
+/* Smarty version 3.1.33, created on 2018-10-26 10:16:05
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\info.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bcdeaa6d70ef7_51900859',
+  'unifunc' => 'content_5bd2cd45545563_76354071',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f6c4fb76398b5b4196ce9fc6ae869ebed4d65cf' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\info.html',
-      1 => 1540218863,
+      1 => 1540541756,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcdeaa6d70ef7_51900859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd2cd45545563_76354071 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
