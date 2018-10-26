@@ -77,5 +77,5 @@
 
     }
 
-    header("Location: index.php");
+    header("Location: normtest.php");
 ?>

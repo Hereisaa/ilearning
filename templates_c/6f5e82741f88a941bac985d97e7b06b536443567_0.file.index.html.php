@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-23 14:42:52
+/* Smarty version 3.1.33, created on 2018-10-26 10:12:31
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bcf174c045117_75672441',
+  'unifunc' => 'content_5bd2cc6f491642_92384805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f5e82741f88a941bac985d97e7b06b536443567' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\index.html',
-      1 => 1540291930,
+      1 => 1540541549,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcf174c045117_75672441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd2cc6f491642_92384805 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,7 +86,7 @@ function content_5bcf174c045117_75672441 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-sm-6" id="difficult">
                 <h3 align="center">程度列表</h3>
                 <div class="list-group" style="font-family: Microsoft JhengHei" align="center">
-                    <a href="teach.php" class="list-group-item list-group-item-action" style="font-weight: bold">字母</a>
+                    <a href="#1" class="list-group-item list-group-item-action" style="font-weight: bold">字母</a>
                     <a href="#2" class="list-group-item list-group-item-action" style="font-weight: bold">日常對話(1)</a>
                     <a href="#3" class="list-group-item list-group-item-action" style="font-weight: bold">...</a>
                     <a href="#4" class="list-group-item list-group-item-action" style="font-weight: bold">...</a>
