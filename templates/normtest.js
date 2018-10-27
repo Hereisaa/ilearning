@@ -112,12 +112,11 @@ window.onload = function(){
 // 開始測驗
 function start_test() {
 	if(username.getAttribute("value")==1){
-		alert("star!");
 		pre_page.style.display="none";
 		test_zone.style.display = "block";
 	}
 	else {
-		alert("login,plz");
+		alert("請先登入");
 		
 	}
 	
