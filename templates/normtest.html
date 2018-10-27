@@ -25,10 +25,8 @@
 <body>
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul">
-		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<li id="navbar_li" style="float:right"><a href="info.php" >說明</a></li>
-		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
-		<li id="navbar_li" style="float:right"><a href="{$login}.php" >{$login}</a></li>
+		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
+		<li id="navbar_li" style="float:right;"><a href="{$login}.php" ><span id="username" value="{$login_status}">{$username}</span>{$login_text}</a></li>
 	</ul>
 	
 	<!-- 題前提示 -->

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-26 11:42:40
+/* Smarty version 3.1.33, created on 2018-10-27 10:15:56
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd2e190794fd2_24361335',
+  'unifunc' => 'content_5bd41ebc28cbb6_38421516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540546960,
+      1 => 1540628156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd2e190794fd2_24361335 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd41ebc28cbb6_38421516 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,11 +58,11 @@ function content_5bd2e190794fd2_24361335 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul">
-		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<li id="navbar_li" style="float:right"><a href="info.php" >說明</a></li>
-		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
-		<li id="navbar_li" style="float:right"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
-.php" ><?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
+		<li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+.php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+</span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
 </a></li>
 	</ul>
 	

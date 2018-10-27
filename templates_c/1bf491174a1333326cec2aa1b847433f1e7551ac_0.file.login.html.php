@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-10-27 09:57:40
+  from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\login.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bd41a7421cb81_48856433',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '1bf491174a1333326cec2aa1b847433f1e7551ac' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\login.html',
+      1 => 1540627057,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bd41a7421cb81_48856433 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 
 <html>
 <head>
@@ -8,8 +31,12 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
     
     <title>登入</title>
 
@@ -64,4 +91,5 @@
     </div>
 </body>
 
-</html>
+</html><?php }
+}

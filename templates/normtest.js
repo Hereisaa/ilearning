@@ -1,7 +1,8 @@
 
 
 // 測驗區變數
-var num ,
+var username,
+	num ,
 	pre_page,
 	test_zone,
 	answer_array,
@@ -56,6 +57,7 @@ window.onload = function(){
 
 
 	num=1;
+	username = document.getElementById("username");
 
 	//開始測驗前的注意事項
 	
@@ -109,9 +111,16 @@ window.onload = function(){
 
 // 開始測驗
 function start_test() {
-	pre_page.style.display="none";
-	test_zone.style.display = "block";
-
+	if(username.getAttribute("value")==1){
+		alert("star!");
+		pre_page.style.display="none";
+		test_zone.style.display = "block";
+	}
+	else {
+		alert("login,plz");
+		
+	}
+	
 }
 
 // 選擇option
@@ -231,6 +240,7 @@ function update_content(){
 // 送出選擇 及 是否已經答題完成
 function commitanswer(){
 	if(mode==0){
+		// mode==0 表示選擇正確字
 		answer_array[num-1]=part1_choosen_option.innerHTML;
 		num++;
 		// 更新介面
@@ -240,6 +250,7 @@ function commitanswer(){
 		part1_choosen_option.innerHTML=null;
 		part1_commit_btn.setAttribute('disabled','');
 	}else if(mode==1){
+		// mode==1 表示選擇正確音
 		answer_array[num-1]=part2_choosen_option.innerHTML;
 		num++;
 		// 更新介面

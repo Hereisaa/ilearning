@@ -45,7 +45,10 @@
 
             $_SESSION["account"] = $row["account"];
             $_SESSION["username"] = $row["username"];
-            header("Location: index.php");
+            /*
+            /登入後的頁面，index.php暫時改到normtest.php
+            */
+            header("Location: normtest.php");
 
         }
         else{

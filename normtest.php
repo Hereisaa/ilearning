@@ -14,8 +14,15 @@
     
     if($username==NULL){
         $smarty->assign("login", "login");
-    }else{
+        $smarty->assign("login_text","登入");
+        $smarty->assign("username","");
+        $smarty->assign("login_status",0);
+    }else{        
         $smarty->assign("login", "logout");
+        $smarty->assign("login_text","登出");
+        $smarty->assign("username",$username);
+        $smarty->assign("login_status",1);
+
     }
 
     $smarty->display("normtest.html");
