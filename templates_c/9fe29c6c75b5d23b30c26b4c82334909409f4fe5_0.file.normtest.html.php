@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-29 13:43:06
+/* Smarty version 3.1.33, created on 2018-10-29 15:35:25
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd7005a86ee68_96148652',
+  'unifunc' => 'content_5bd71aade34ca6_84981191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540816986,
+      1 => 1540823725,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd71aade34ca6_84981191 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -139,10 +139,10 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 		                	<input type="text" name="account" id="account" value="" placeholder="請填入電子信箱 example@gmail.com" class="form-control">
 		            	</div>
 
-		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
+		            	<!-- <div class="form-group" style="width: 75%;padding-left: 25%;">
 		                	<label for="username">暱稱</label>
 		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
-		            	</div>	            
+		            	</div>	 -->            
 	        		</form>
 	    		</div>
 				<div class="row" style="padding-top: 10px;">

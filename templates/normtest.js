@@ -59,7 +59,7 @@ window.onload = function(){
 
 
 	num=1;
-	username = document.getElementById("username");
+	// username = document.getElementById("username");
 	account = document.getElementById("account");
 
 	//開始測驗前的注意事項
@@ -116,9 +116,11 @@ window.onload = function(){
 function start_test() {
 	if(account.value.search(emailRule)==-1){
 		alert("請輸入正確的電子信箱");
-	}else if(username.value ==""){
-		alert("請輸入暱稱");
-	}else{
+	}
+	// else if(username.value ==""){
+	// 	alert("請輸入暱稱");
+	// }
+	else{
 		pre_page.style.display="none";
 		test_zone.style.display = "block";
 	}
