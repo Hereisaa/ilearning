@@ -60,7 +60,7 @@ window.onload = function(){
 
 	num=1;
 	// username = document.getElementById("username");
-	account = document.getElementById("account");
+	test_email = document.getElementById("test_email");
 
 	//開始測驗前的注意事項
 	
@@ -112,17 +112,33 @@ window.onload = function(){
 	update_content();
 }
 
-// 開始測驗
+// 開始測驗 *使用pre_test_submit 並且將說明頁面跟題目分開 因此這裡尚未使用到
 function start_test() {
-	if(account.value.search(emailRule)==-1){
+	if(test_email.value.search(emailRule)==-1){
 		alert("請輸入正確的電子信箱");
 	}
 	// else if(username.value ==""){
 	// 	alert("請輸入暱稱");
 	// }
 	else{
+		//document.getElementById("pre_page_form").action = "./normtest.php";
+		document.getElementById("pre_page_form").submit();
+
 		pre_page.style.display="none";
 		test_zone.style.display = "block";
+	}
+	
+}
+
+// pre_test_submit
+function pre_test_submit() {
+	if(test_email.value.search(emailRule)==-1){
+		alert("請輸入正確的電子信箱");
+	}
+	else{
+		document.getElementById("pre_page_form").action = "./normtest.php";
+		document.getElementById("pre_page_form").submit();
+
 	}
 	
 }
