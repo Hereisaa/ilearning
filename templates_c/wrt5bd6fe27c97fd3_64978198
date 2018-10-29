@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-29 13:43:06
+/* Smarty version 3.1.33, created on 2018-10-29 13:33:43
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd7005a86ee68_96148652',
+  'unifunc' => 'content_5bd6fe27c96bc5_45492697',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540816986,
+      1 => 1540816423,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd6fe27c96bc5_45492697 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,7 +83,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="container" >
 					<!-- 題號區 -->
 					<div class="container">
-						<h2><strong>一、單元音 (範例)</strong></h2>
+						<h2><strong>一、單元音</strong></h2>
 						<div class="col-sm-4">
 							<h2><strong>選出正確的字母 </strong> </h2>
 						</div>
@@ -121,7 +121,8 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 					
 				    <!-- 確認區 -->
 				    <div class="container col-sm-3" >
-			    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="example_choosen_option"></span></strong></div>
+				    	<div class="row" style="font-size: 40px">選擇</div>
+			    		<div class="row" style="font-size: 50px" id="example_choosen_option"><strong>　</strong></div>
 			    		<div class="row" style="padding-top: 10px"><button id="example_commit_btn" type="button" disabled="" class="btn" onclick="example_commit();">確認</button></div>
 			    		<div class="row"><p>(點擊A、B、C、D後，按下確認，即可進入下一題。)</p></div>
 			    	</div>
@@ -195,7 +196,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 			
 		    <!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong> <span id="part1_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part1_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 		</div>
@@ -241,7 +242,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong> <span id="part2_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part2_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 

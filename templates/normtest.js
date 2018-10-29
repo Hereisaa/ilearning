@@ -2,6 +2,7 @@
 
 // 測驗區變數
 var username,
+	account,
 	num ,
 	pre_page,
 	test_zone,
@@ -50,7 +51,8 @@ var  thank_zone,
 	},
 	correct_answer_array = ["B","A","D","D","B","A","C","B","B","C","A","C","D","A","B","C","B","D","A","C","B","C","A","D","A","C","B","D"];
 
-
+// email rule
+var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
 window.onload = function(){	
 
@@ -58,6 +60,7 @@ window.onload = function(){
 
 	num=1;
 	username = document.getElementById("username");
+	account = document.getElementById("account");
 
 	//開始測驗前的注意事項
 	
@@ -111,13 +114,13 @@ window.onload = function(){
 
 // 開始測驗
 function start_test() {
-	if(username.getAttribute("value")==1){
+	if(account.value.search(emailRule)==-1){
+		alert("請輸入正確的電子信箱");
+	}else if(username.value ==""){
+		alert("請輸入暱稱");
+	}else{
 		pre_page.style.display="none";
 		test_zone.style.display = "block";
-	}
-	else {
-		alert("請先登入");
-		
 	}
 	
 }
@@ -218,7 +221,7 @@ function update_content(){
 		part2_question_num.innerHTML=num;
 		part2_question_type.innerHTML = question_json3.question_type;
 		part2_question.innerHTML = "雙輔音 ";
-		part2_question_content.innerHTML = question_json2.question[num-21].question_text;
+		part2_question_content.innerHTML = question_json3.question[num-21].question_text;
 		part2_audio_a.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3a;
 		part2_audio_b.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3b;
 		part2_audio_c.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3c;
@@ -246,7 +249,7 @@ function commitanswer(){
 		update_content();
 		
 		// 送出後，將btn鎖死。並且更新choosen_option
-		part1_choosen_option.innerHTML=null;
+		part1_choosen_option.innerHTML="";
 		part1_commit_btn.setAttribute('disabled','');
 	}else if(mode==1){
 		// mode==1 表示選擇正確音
@@ -256,7 +259,7 @@ function commitanswer(){
 		update_content();
 		
 		// 送出後，將btn鎖死。並且更新choosen_option
-		part2_choosen_option.innerHTML=null;
+		part2_choosen_option.innerHTML="";
 		part2_commit_btn.setAttribute('disabled','');
 	}
 	
@@ -449,7 +452,29 @@ function add_element(obj){
 		obj.form.appendChild(s);
 	}
 
-	document.getElementById("myform").action = "../export_excel.php";
-	document.getElementById("myform").submit();
-	
+	document.getElementById("myform").action = "./export_excel.php";
+	document.getElementById("myform").submit();	
 }
+
+// alert及confirm 取消顯示Ip及域名
+// window.alert = function(name){
+
+//         var iframe = document.createElement("IFRAME");
+//         iframe.style.display="none";
+//         iframe.setAttribute("src", 'data:text/plain,');
+//         document.documentElement.appendChild(iframe);
+//         window.frames[0].window.alert(name);
+//         iframe.parentNode.removeChild(iframe);
+//     }
+
+
+// window.confirm = function (message) {
+//             var iframe = document.createElement("IFRAME");
+//             iframe.style.display = "none";
+//             iframe.setAttribute("src", 'data:text/plain,');
+//             document.documentElement.appendChild(iframe);
+//             var alertFrame = window.frames[0];
+//             var result = alertFrame.window.confirm(message);
+//             iframe.parentNode.removeChild(iframe);
+//             return result;
+//     }

@@ -1,5 +1,5 @@
 <?php
-    include('123.php');
+    // include('123.php');
     require_once "phpExcel/PHPExcel.php";
 
     session_start();  
@@ -34,7 +34,7 @@
         $objSheet->setTitle('result'); 
 
         // SHEET COLUMN NAME
-        $objSheet->setCellValue("A1","姓名");
+        $objSheet->setCellValue("A1","學生編號");
         for($i = 0; $i < $q_num; $i++){
             $objSheet->setCellValue($cellName[$i+1]."1","第".($i+1)."題");
         }

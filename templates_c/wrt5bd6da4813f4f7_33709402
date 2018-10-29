@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-29 13:43:06
+/* Smarty version 3.1.33, created on 2018-10-29 11:00:40
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd7005a86ee68_96148652',
+  'unifunc' => 'content_5bd6da4813e001_80338539',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540816986,
+      1 => 1540807240,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd6da4813e001_80338539 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,7 +44,6 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 	<?php echo '<script'; ?>
  type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"><?php echo '</script'; ?>
 >
-	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
     <style >
     	
@@ -58,13 +57,13 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
+	<ul id="navbar_ul">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+		<li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
 .php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 </span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
-</a></li> -->
+</a></li>
 	</ul>
 	
 	<!-- 題前提示 -->
@@ -83,7 +82,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="container" >
 					<!-- 題號區 -->
 					<div class="container">
-						<h2><strong>一、單元音 (範例)</strong></h2>
+						<h2><strong>一、單元音</strong></h2>
 						<div class="col-sm-4">
 							<h2><strong>選出正確的字母 </strong> </h2>
 						</div>
@@ -121,7 +120,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 					
 				    <!-- 確認區 -->
 				    <div class="container col-sm-3" >
-			    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="example_choosen_option"></span></strong></div>
+			    		<div class="row" style="font-size: 50px" id="example_choosen_option"><strong>　</strong></div>
 			    		<div class="row" style="padding-top: 10px"><button id="example_commit_btn" type="button" disabled="" class="btn" onclick="example_commit();">確認</button></div>
 			    		<div class="row"><p>(點擊A、B、C、D後，按下確認，即可進入下一題。)</p></div>
 			    	</div>
@@ -130,18 +129,18 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 		<!-- 表單填寫 -->
 		<div class="row" style="padding-top: 20px; justify-content: center;">
-			<div class="" >
+			<div class="row" >
 				<div>
 	       			<form id="form1" name="form1" action="register.php" method="post">
 		            	<input type="hidden" name="postback" value="true">
-		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
-		                	<label for="account">電子信箱</label>
-		                	<input type="text" name="account" id="account" value="" placeholder="請填入電子信箱 example@gmail.com" class="form-control">
+		            	<div class="form-group" style="width: 300px;">
+		                	<label for="account">電子郵件</label>
+		                	<input type="text" name="account" id="account" value="" placeholder="請填入電子郵件" class="form-control">
 		            	</div>
 
-		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
+		            	<div class="form-group" style="width: 300px;">
 		                	<label for="username">暱稱</label>
-		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
+		                	<input type="text" name="username" id="username" value="" placeholder="請填入姓名" class="form-control">
 		            	</div>	            
 	        		</form>
 	    		</div>
@@ -195,7 +194,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 			
 		    <!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong> <span id="part1_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part1_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 		</div>
@@ -241,7 +240,7 @@ function content_5bd7005a86ee68_96148652 (Smarty_Internal_Template $_smarty_tpl)
 			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong> <span id="part2_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part2_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 

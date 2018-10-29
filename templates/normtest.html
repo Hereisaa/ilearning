@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="templates/normtest.js"></script>
 	<script type="text/javascript" src="templates/export_xls.js"></script>
 	<script type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
     <style >
     	
@@ -24,9 +25,9 @@
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<ul id="navbar_ul">
+	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<li id="navbar_li" style="float:right;"><a href="{$login}.php" ><span id="username" value="{$login_status}">{$username}</span>{$login_text}</a></li>
+		<!-- <li id="navbar_li" style="float:right;"><a href="{$login}.php" ><span id="username" value="{$login_status}">{$username}</span>{$login_text}</a></li> -->
 	</ul>
 	
 	<!-- 題前提示 -->
@@ -39,13 +40,13 @@
 				<h4>聽力測驗共有三大題，分為單元音、單輔音、雙輔音。</h4>
 				<h4>每大題共有兩部分(A)選出正確的字母(B)選出正確的讀音。</h4>
 		</div>
-		<div class="row">
+		<div class="row" >
 			<!-- 範例區塊 -->
 			<div class="container" style="border: 1px solid #cecece; text-align: left; padding-bottom: 20px;">
 				<div class="container" >
 					<!-- 題號區 -->
 					<div class="container">
-						<h2><strong>一、單元音</strong></h2>
+						<h2><strong>一、單元音 (範例)</strong></h2>
 						<div class="col-sm-4">
 							<h2><strong>選出正確的字母 </strong> </h2>
 						</div>
@@ -83,16 +84,35 @@
 					
 				    <!-- 確認區 -->
 				    <div class="container col-sm-3" >
-			    		<div class="row" style="font-size: 50px" id="example_choosen_option"><strong>　</strong></div>
+			    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="example_choosen_option"></span></strong></div>
 			    		<div class="row" style="padding-top: 10px"><button id="example_commit_btn" type="button" disabled="" class="btn" onclick="example_commit();">確認</button></div>
 			    		<div class="row"><p>(點擊A、B、C、D後，按下確認，即可進入下一題。)</p></div>
 			    	</div>
 				</div>
 			</div>
 		</div>
-		<div class="row" style="padding-top: 10px;">
-			<button  class="btn btn-success" onclick="start_test();" style="font-size: 40px">開始</button>
-		</div>
+		<!-- 表單填寫 -->
+		<div class="row" style="padding-top: 20px; justify-content: center;">
+			<div class="" >
+				<div>
+	       			<form id="form1" name="form1" action="register.php" method="post">
+		            	<input type="hidden" name="postback" value="true">
+		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
+		                	<label for="account">電子信箱</label>
+		                	<input type="text" name="account" id="account" value="" placeholder="請填入電子信箱 example@gmail.com" class="form-control">
+		            	</div>
+
+		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
+		                	<label for="username">暱稱</label>
+		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
+		            	</div>	            
+	        		</form>
+	    		</div>
+				<div class="row" style="padding-top: 10px;">
+					<button  class="btn btn-success" onclick="start_test();" style="font-size: 40px">開始</button>
+				</div>
+			</div>
+		</div>	
 	</div>
 	<!-- 題目及測驗整體 -->
 	<div id="test_zone" class="container" style="display: none;">
@@ -138,7 +158,7 @@
 			
 		    <!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong> <span id="part1_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part1_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 		</div>
@@ -184,7 +204,7 @@
 			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong> <span id="part2_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part2_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 

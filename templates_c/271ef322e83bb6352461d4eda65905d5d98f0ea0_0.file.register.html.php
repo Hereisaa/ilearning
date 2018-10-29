@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-26 11:55:07
+/* Smarty version 3.1.33, created on 2018-10-29 10:33:20
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\register.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd2e47b944080_10156550',
+  'unifunc' => 'content_5bd6d3e0b50850_47540936',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '271ef322e83bb6352461d4eda65905d5d98f0ea0' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\register.html',
-      1 => 1540540425,
+      1 => 1540805600,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd2e47b944080_10156550 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd6d3e0b50850_47540936 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <meta charset="utf-8">
@@ -42,7 +42,7 @@ function content_5bd2e47b944080_10156550 (Smarty_Internal_Template $_smarty_tpl)
            top: 50%;
            left: 50%;
            width: 300px;
-           height: 400px;
+           height: 320px;
            margin-top: -200px;
            margin-left: -150px;
            padding: 20px;
@@ -74,8 +74,9 @@ function content_5bd2e47b944080_10156550 (Smarty_Internal_Template $_smarty_tpl)
         <form id="form1" name="form1" action="register.php" method="post">
             <input type="hidden" name="postback" value="true">
             <div class="form-group">
-                <label for="account">帳號</label>
-                <input type="text" name="account" id="account" value="" placeholder="請填入帳號" class="form-control">
+              <!-- 帳號暫時用電子郵件替代 -->
+                <label for="account">電子郵件</label>
+                <input type="text" name="account" id="account" value="" placeholder="請填入電子郵件" class="form-control">
             </div>
 
             <div class="form-group">
@@ -84,6 +85,11 @@ function content_5bd2e47b944080_10156550 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 
             <div class="form-group">
+                <label for="password">密碼確認</label>
+                <input type="password" name="password" id="passwordcheck" value="" placeholder="請填入密碼" class="form-control">
+            </div>
+
+            <!-- <div class="form-group">
                 <label for="username">姓名</label>
                 <input type="text" name="username" id="username" value="" placeholder="請填入姓名" class="form-control">
             </div>
@@ -91,7 +97,7 @@ function content_5bd2e47b944080_10156550 (Smarty_Internal_Template $_smarty_tpl)
             <div class="form-group">
                 <label for="email">電子郵件</label>
                 <input type="text" name="email" id="email" value="" placeholder="請填入email" class="form-control">
-            </div>
+            </div> -->
 
             <div>
                 <input type="submit" name="register" id="register" value="註冊" class="btn btn-lg btn-danger" />
