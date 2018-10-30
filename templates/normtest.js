@@ -470,7 +470,7 @@ function add_element(obj){
 		obj.form.appendChild(s);
 	}
 
-	document.getElementById("myform").action = "./export_excel.php";
+	document.getElementById("myform").action = "./test_answer.php";
 	document.getElementById("myform").submit();	
 }
 

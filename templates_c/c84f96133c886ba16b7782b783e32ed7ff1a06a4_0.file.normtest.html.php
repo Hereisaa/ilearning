@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-26 10:08:13
+/* Smarty version 3.1.33, created on 2018-10-30 08:03:53
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd2cb6dc3ade2_77262048',
+  'unifunc' => 'content_5bd802596b0676_78848803',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84f96133c886ba16b7782b783e32ed7ff1a06a4' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
-      1 => 1540541289,
+      1 => 1540882243,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd802596b0676_78848803 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +44,7 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
 	<?php echo '<script'; ?>
  type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"><?php echo '</script'; ?>
 >
+	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
     <style >
     	
@@ -57,82 +58,17 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<ul id="navbar_ul">
-		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
-		<li id="navbar_li" style="float:right"><a href="info.php" >說明</a></li>
-		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
-		<li id="navbar_li" style="float:right"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
-.php" ><?php echo $_smarty_tpl->tpl_vars['login']->value;?>
-</a></li>
+	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
+		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
+		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+.php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+</span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
+</a></li> -->
 	</ul>
 	
-	<!-- 題前提示 -->
-	<div class="container text-center" id="pre_page">
-		<div class="row">
-			<h2><strong>越南語測驗</strong></h2>	
-		</div>
-		
-		<div class="row">
-				<h4>聽力測驗共有三大題，分為單元音、單輔音、雙輔音。</h4>
-				<h4>每大題共有兩部分(A)選出正確的字母(B)選出正確的讀音。</h4>
-		</div>
-		<div class="row">
-			<!-- 範例區塊 -->
-			<div class="container" style="border: 1px solid #cecece; text-align: left; padding-bottom: 20px;">
-				<div class="container" >
-					<!-- 題號區 -->
-					<div class="container">
-						<h2><strong>一、單元音</strong></h2>
-						<div class="col-sm-4">
-							<h2><strong>選出正確的字母 </strong> </h2>
-						</div>
-						<div class="col-sm-4"> 
-							<h2><strong>第x題 / 共28題</strong> </h2>
-						</div>
-					</div>
-					<!-- 音檔、選擇區 -->
-					<div class="container col-sm-8">
-						<!-- 音檔播放區 -->
-					    <div class="container" style="padding-top: 15px;">
-					    	<audio src="templates/audio/normtest/unitsound/q3.mp3" controls="controls" controlsList="nodownload" oncontextmenu="return false">
-					    	</audio>
-					    </div>
-					    <!-- 選擇區 -->
-					    <div class="container" style="padding-top: 15px">
-					    	<div class="row" style="padding-top: 10px; ">
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')">A : i</button>
-					    		</div>
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')">B : e</button>
-					    		</div>
-					    	</div>
-					    	<div class="row " style="padding-top: 10px; ">
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')">C : ư</button>
-					    		</div>
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')">D : ê</button>
-					    		</div>
-					    	</div>
-					    </div>
-					</div>
-					
-				    <!-- 確認區 -->
-				    <div class="container col-sm-3" >
-			    		<div class="row" style="font-size: 50px" id="example_choosen_option"><strong>　</strong></div>
-			    		<div class="row" style="padding-top: 10px"><button id="example_commit_btn" type="button" disabled="" class="btn" onclick="example_commit();">確認</button></div>
-			    		<div class="row"><p>(點擊A、B、C、D後，按下確認，即可進入下一題。)</p></div>
-			    	</div>
-				</div>
-			</div>
-		</div>
-		<div class="row" style="padding-top: 10px;">
-			<button  class="btn btn-success" onclick="start_test();" style="font-size: 40px">開始</button>
-		</div>
-	</div>
 	<!-- 題目及測驗整體 -->
-	<div id="test_zone" class="container" style="display: none;">
+	<div id="test_zone" class="container" style="display: block;">
 		<!-- 第一部 -->
 		<div id="part1_container" class="container" >
 			<!-- 題號區 -->
@@ -175,7 +111,7 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
 			
 		    <!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong> <span id="part1_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part1_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 		</div>
@@ -221,7 +157,7 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
 			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong> <span id="part2_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" ></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part2_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 
@@ -241,8 +177,8 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
     <div id="thank_zone" class="container" style="display: none; ">
     	<!-- 作答情形區 -->
     	<div class="container col-sm-3 col-sm-offset-4 text-center">
-    	   	<h2 class="row">Thanks for Testing </h2>
-    	   	<h3 class="row">Correct rate : <span id="correct_num"></span>/28</h3>
+    	   	<h2 class="row">感謝您的參與 </h2>
+    	   	<h3 class="row">正確率 : <span id="correct_num"></span>/28</h3>
     	   	<table class="table" style="display: none;">
 	    		<thead>
 	    			<tr>
@@ -261,7 +197,7 @@ function content_5bd2cb6dc3ade2_77262048 (Smarty_Internal_Template $_smarty_tpl)
 
 			
 
-			<!-- 回到index.html -->
+			<!-- 回到index.html 並輸出excel-->
 			<form id="myform" method="POST">
 				<input type="button" value="回常模測試主頁" class="btn btn-primary" onclick="add_element(this);" ><br />
 			</form>
