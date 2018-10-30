@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 11:40:03
+/* Smarty version 3.1.33, created on 2018-10-30 11:51:05
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd83503eeb5c9_79129095',
+  'unifunc' => 'content_5bd837999c7c50_46769151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30d6612f029d064aae5cdedefe17863367a5a7a3' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\pre_test_page.html',
-      1 => 1540896001,
+      1 => 1540896664,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd83503eeb5c9_79129095 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd837999c7c50_46769151 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,7 +60,7 @@ function content_5bd83503eeb5c9_79129095 (Smarty_Internal_Template $_smarty_tpl)
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<li id="navbar_li" style="float:right;"><a><span id="download_excel" onclick="download_excel_click();">下載</span></a></li>
+		<li id="navbar_li" style="float:right"><a class="active" href="normtest.php" class="nav navbar-inverse" onclick="download_excel_click();">下載</a></li>
 	</ul>
 	
 	<!-- 題前提示 -->
