@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 08:03:30
+/* Smarty version 3.1.33, created on 2018-10-30 11:40:03
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd8024284eb12_85520207',
+  'unifunc' => 'content_5bd83503eeb5c9_79129095',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30d6612f029d064aae5cdedefe17863367a5a7a3' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\pre_test_page.html',
-      1 => 1540882244,
+      1 => 1540896001,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd8024284eb12_85520207 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd83503eeb5c9_79129095 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -60,11 +60,7 @@ function content_5bd8024284eb12_85520207 (Smarty_Internal_Template $_smarty_tpl)
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
-.php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
-</span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
-</a></li> -->
+		<li id="navbar_li" style="float:right;"><a><span id="download_excel" onclick="download_excel_click();">下載</span></a></li>
 	</ul>
 	
 	<!-- 題前提示 -->
@@ -143,7 +139,8 @@ function content_5bd8024284eb12_85520207 (Smarty_Internal_Template $_smarty_tpl)
 		                	<label for="username">暱稱</label>
 		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
 		            	</div>	 -->            
-	        		</form>
+					</form>
+
 	    		</div>
 				<div class="row" style="padding-top: 10px;">
 					<button  class="btn btn-success" onclick="pre_test_submit();" style="font-size: 40px">開始</button>
