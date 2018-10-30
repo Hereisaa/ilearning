@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 11:53:07
+/* Smarty version 3.1.33, created on 2018-10-30 08:46:57
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd83813a853a0_37195002',
+  'unifunc' => 'content_5bd80c711719f3_70014595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '650b9db8814f81773b70660c19467aa463f0164b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\pre_test_page.html',
-      1 => 1540896506,
+      1 => 1540885617,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd83813a853a0_37195002 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd80c711719f3_70014595 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -60,7 +60,7 @@ function content_5bd83813a853a0_37195002 (Smarty_Internal_Template $_smarty_tpl)
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<li id="navbar_li" style="float:right;"><a><span id="download_excel" onclick="download_excel_click();">下載</span></a></li>
+		<li id="navbar_li" style="float:right;"><a href="" ><span id="download_excel" onclick="download_excel_click();">下載</span></a></li>
 	</ul>
 	
 	<!-- 題前提示 -->
@@ -139,8 +139,7 @@ function content_5bd83813a853a0_37195002 (Smarty_Internal_Template $_smarty_tpl)
 		                	<label for="username">暱稱</label>
 		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
 		            	</div>	 -->            
-					</form>
-
+	        		</form>
 	    		</div>
 				<div class="row" style="padding-top: 10px;">
 					<button  class="btn btn-success" onclick="pre_test_submit();" style="font-size: 40px">開始</button>
