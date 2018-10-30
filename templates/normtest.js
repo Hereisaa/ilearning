@@ -62,6 +62,7 @@ window.onload = function(){
 	num=1;
 	// username = document.getElementById("username");
 	test_email = document.getElementById("test_email");
+	test_email_download = document.getElementById("test_email_download");
 	download_excel = document.getElementById("download_excel");
 
 	//開始測驗前的注意事項
@@ -117,7 +118,7 @@ window.onload = function(){
 // 開始測驗 *使用pre_test_submit 並且將說明頁面跟題目分開 因此這裡尚未使用到
 function start_test() {
 	if(test_email.value.search(emailRule)==-1){
-		alert("請輸入正確的電子信箱");
+		alert("請輸入正確的電子信箱1");
 	}
 	// else if(username.value ==""){
 	// 	alert("請輸入暱稱");
@@ -131,11 +132,16 @@ function start_test() {
 	}
 	
 }
+
 // 下載excel
 function download_excel_click() {
 	// body...
 	if(test_email.value=="mingmin@gmail.nsysu.edu.tw"){
 		// 在這裡下載excel
+		
+		document.getElementById("pre_page_form").action = "./export_excel.php";
+		document.getElementById("pre_page_form").submit();
+		
 		alert("downloading..");
 
 	}else{
@@ -484,8 +490,8 @@ function add_element(obj){
 		obj.form.appendChild(s);
 	}
 
-	//document.getElementById("myform").action = "./test_answer.php";
-	document.getElementById("myform").action = "./export_excel.php";
+	document.getElementById("myform").action = "./test_answer.php";
+	//document.getElementById("myform").action = "./export_excel.php";
 	document.getElementById("myform").submit();	
 }
 

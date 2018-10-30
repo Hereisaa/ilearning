@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 08:03:53
+/* Smarty version 3.1.33, created on 2018-10-30 11:40:06
   from 'C:\Users\a0979\Documents\GitHub\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd802596b0676_78848803',
+  'unifunc' => 'content_5bd83506179c80_64027525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84f96133c886ba16b7782b783e32ed7ff1a06a4' => 
     array (
       0 => 'C:\\Users\\a0979\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
-      1 => 1540882243,
+      1 => 1540895998,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd802596b0676_78848803 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd83506179c80_64027525 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
