@@ -56,7 +56,7 @@
 
         // 建立.xlsx
         $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
-        //$objWrite->save("test/TestResult.xlsx");
+        // $objWrite->save("test/TestResult.xlsx");
 
         $date = date("Ymd_His");
 
@@ -65,34 +65,34 @@
         exit;
     } 
     
-    /*
-    else{
-        //include('phpExcel/PHPExcel.php');  //引入PHP EXCEL類  
-        $objRead = new PHPExcel_Reader_Excel2007();   //創建reader對象  
-        if(!$objRead->canRead($file)){  
-            $objRead = new PHPExcel_Reader_Excel5();  
-            if(!$objRead->canRead($file)){  
-                die('No Excel!');  
-            }  
-        }  
+    
+    // else{
+    //     //include('phpExcel/PHPExcel.php');  //引入PHP EXCEL類  
+    //     $objRead = new PHPExcel_Reader_Excel2007();   //創建reader對象  
+    //     if(!$objRead->canRead($file)){  
+    //         $objRead = new PHPExcel_Reader_Excel5();  
+    //         if(!$objRead->canRead($file)){  
+    //             die('No Excel!');  
+    //         }  
+    //     }  
 
-        $objPHPExcel = $objRead->load($file);  //創建excel對象  
-        $objSheet = $objPHPExcel->getSheet(0);   //獲取sheet表  
-        $columnH = $objSheet->getHighestColumn();   //獲取最大的列號  
-        $columnCnt = array_search($columnH, $cellName);  
-        $rowCnt = $objSheet->getHighestRow();   //獲取總行數 
+    //     $objPHPExcel = $objRead->load($file);  //創建excel對象  
+    //     $objSheet = $objPHPExcel->getSheet(0);   //獲取sheet表  
+    //     $columnH = $objSheet->getHighestColumn();   //獲取最大的列號  
+    //     $columnCnt = array_search($columnH, $cellName);  
+    //     $rowCnt = $objSheet->getHighestRow();   //獲取總行數 
 
-        // 輸入表格
-        $objSheet->setCellValue("A".($rowCnt+1),$username);
-        for($i = 0; $i < $q_num; $i++){
-            $objSheet->setCellValue($cellName[$i+1]."".($rowCnt+1),$true_false[$i]);
-        }
+    //     // 輸入表格
+    //     $objSheet->setCellValue("A".($rowCnt+1),$username);
+    //     for($i = 0; $i < $q_num; $i++){
+    //         $objSheet->setCellValue($cellName[$i+1]."".($rowCnt+1),$true_false[$i]);
+    //     }
 
-        $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
-        $objWrite->save("test/TestResult.xlsx");
+    //     $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
+    //     $objWrite->save("test/TestResult.xlsx");
 
-    }
+    // }
 
-    header("Location: normtest.php");
-    */
+    // header("Location: normtest.php");
+    
 ?>
