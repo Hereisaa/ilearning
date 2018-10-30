@@ -32,23 +32,40 @@
         $objSheet=$objPHPExcel->getActiveSheet();
         $objSheet->setTitle('result'); 
 
+        function browser_export($type,$filename){  //聲明一個方法  判斷保存 保存格式
+            if($type=='Excel5'){ 
+                header('Content-Type: application/vnd.ms-excel');
+            }else{
+                header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+            }
+            header('Content-Disposition: attachment;filename="'.$filename.'"');//告訴瀏覽器 輸出的文檔名稱
+            header('Cache-Control: max-age=0');//禁止緩存
+        }
+
         // SHEET COLUMN NAME
         $objSheet->setCellValue("A1","學生編號");
         for($i = 0; $i < $q_num; $i++){
-            $objSheet->setCellValue($cellName[$i+1]."1","第".($i+1)."題");
+            $objSheet->setCellValue($cellName[$i+1]."1","第".($i+1)."題",PHPExcel_Cell_DataType::TYPE_STRING);
         }
 
         // 輸入表格
         $objSheet->setCellValue("A2",$username);
         for($i = 0; $i < $q_num; $i++){
-            $objSheet->setCellValue($cellName[$i+1]."2",$true_false[$i]);
+            $objSheet->setCellValue($cellName[$i+1]."2",$true_false[$i],PHPExcel_Cell_DataType::TYPE_STRING);
         }
 
         // 建立.xlsx
         $objWrite=PHPExcel_IOFactory::createWriter($objPHPExcel,"Excel2007");
-        $objWrite->save("test/TestResult.xlsx");
+        //$objWrite->save("test/TestResult.xlsx");
+
+        $date = date("Ymd_His");
+
+        browser_export("Excel2007",'TestResult_'.$date.'.xlsx');  //不保存在當前文檔夾下，直接輸出至瀏覽器
+        $objWrite->save('php://output');           //保存
+        exit;
     } 
     
+    /*
     else{
         //include('phpExcel/PHPExcel.php');  //引入PHP EXCEL類  
         $objRead = new PHPExcel_Reader_Excel2007();   //創建reader對象  
@@ -77,4 +94,5 @@
     }
 
     header("Location: normtest.php");
+    */
 ?>
