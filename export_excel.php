@@ -1,15 +1,24 @@
 <?php
-    //include('123.php');
+    // include('123.php');
     require_once "phpExcel/PHPExcel.php";
 
     session_start();  
-        
+    /*    
     if(isset($_SESSION["username"])){
         $username = $_SESSION["username"];
     }
     else{
         $username = NULL;
     }
+    */
+    // account -> test_email 暫時代替(為了測驗只要求email)
+    if(isset($_SESSION["test_email"])){
+        $username = $_SESSION["test_email"];
+    }
+    else{
+        $username = NULL;
+    }
+
     // questuin number
     $q_num = $_POST["q_num"];
 
@@ -34,7 +43,7 @@
         $objSheet->setTitle('result'); 
 
         // SHEET COLUMN NAME
-        $objSheet->setCellValue("A1","姓名");
+        $objSheet->setCellValue("A1","學生編號");
         for($i = 0; $i < $q_num; $i++){
             $objSheet->setCellValue($cellName[$i+1]."1","第".($i+1)."題");
         }

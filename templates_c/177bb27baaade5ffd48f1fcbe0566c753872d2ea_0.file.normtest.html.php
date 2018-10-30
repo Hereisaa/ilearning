@@ -1,4 +1,27 @@
-<html lang="en">
+<?php
+/* Smarty version 3.1.33, created on 2018-10-29 22:41:43
+  from 'C:\Users\user\Documents\GitHub\ilearning\templates\normtest.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bd77e97851f55_78229624',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '177bb27baaade5ffd48f1fcbe0566c753872d2ea' => 
+    array (
+      0 => 'C:\\Users\\user\\Documents\\GitHub\\ilearning\\templates\\normtest.html',
+      1 => 1540849301,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bd77e97851f55_78229624 (Smarty_Internal_Template $_smarty_tpl) {
+?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,11 +29,21 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="templates/normtest.js"></script>
-	<script type="text/javascript" src="templates/export_xls.js"></script>
-	<script type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="templates/normtest.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="templates/export_xls.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="js-xlsx/dist/xlsx.core.min.js"><?php echo '</script'; ?>
+>
 	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
     <style >
@@ -27,7 +60,11 @@
 	<!-- 登入後資訊區 navbar-->
 	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<!-- <li id="navbar_li" style="float:right;"><a href="{$login}.php" ><span id="username" value="{$login_status}">{$username}</span>{$login_text}</a></li> -->
+		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+.php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+</span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
+</a></li> -->
 	</ul>
 	
 	<!-- 題目及測驗整體 -->
@@ -168,4 +205,5 @@
     	</div>
     </div>
 </body>
-</html>
+</html><?php }
+}

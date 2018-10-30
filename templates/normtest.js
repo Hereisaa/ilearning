@@ -1,7 +1,9 @@
 
 
 // 測驗區變數
-var num ,
+var username,
+	account,
+	num ,
 	pre_page,
 	test_zone,
 	answer_array,
@@ -49,13 +51,16 @@ var  thank_zone,
 	},
 	correct_answer_array = ["B","A","D","D","B","A","C","B","B","C","A","C","D","A","B","C","B","D","A","C","B","C","A","D","A","C","B","D"];
 
-
+// email rule
+var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
 window.onload = function(){	
 
 
 
 	num=1;
+	// username = document.getElementById("username");
+	test_email = document.getElementById("test_email");
 
 	//開始測驗前的注意事項
 	
@@ -107,11 +112,35 @@ window.onload = function(){
 	update_content();
 }
 
-// 開始測驗
+// 開始測驗 *使用pre_test_submit 並且將說明頁面跟題目分開 因此這裡尚未使用到
 function start_test() {
-	pre_page.style.display="none";
-	test_zone.style.display = "block";
+	if(test_email.value.search(emailRule)==-1){
+		alert("請輸入正確的電子信箱");
+	}
+	// else if(username.value ==""){
+	// 	alert("請輸入暱稱");
+	// }
+	else{
+		//document.getElementById("pre_page_form").action = "./normtest.php";
+		document.getElementById("pre_page_form").submit();
 
+		pre_page.style.display="none";
+		test_zone.style.display = "block";
+	}
+	
+}
+
+// pre_test_submit
+function pre_test_submit() {
+	if(test_email.value.search(emailRule)==-1){
+		alert("請輸入正確的電子信箱");
+	}
+	else{
+		document.getElementById("pre_page_form").action = "./normtest.php";
+		document.getElementById("pre_page_form").submit();
+
+	}
+	
 }
 
 // 選擇option
@@ -210,7 +239,7 @@ function update_content(){
 		part2_question_num.innerHTML=num;
 		part2_question_type.innerHTML = question_json3.question_type;
 		part2_question.innerHTML = "雙輔音 ";
-		part2_question_content.innerHTML = question_json2.question[num-21].question_text;
+		part2_question_content.innerHTML = question_json3.question[num-21].question_text;
 		part2_audio_a.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3a;
 		part2_audio_b.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3b;
 		part2_audio_c.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3c;
@@ -231,22 +260,24 @@ function update_content(){
 // 送出選擇 及 是否已經答題完成
 function commitanswer(){
 	if(mode==0){
+		// mode==0 表示選擇正確字
 		answer_array[num-1]=part1_choosen_option.innerHTML;
 		num++;
 		// 更新介面
 		update_content();
 		
 		// 送出後，將btn鎖死。並且更新choosen_option
-		part1_choosen_option.innerHTML=null;
+		part1_choosen_option.innerHTML="";
 		part1_commit_btn.setAttribute('disabled','');
 	}else if(mode==1){
+		// mode==1 表示選擇正確音
 		answer_array[num-1]=part2_choosen_option.innerHTML;
 		num++;
 		// 更新介面
 		update_content();
 		
 		// 送出後，將btn鎖死。並且更新choosen_option
-		part2_choosen_option.innerHTML=null;
+		part2_choosen_option.innerHTML="";
 		part2_commit_btn.setAttribute('disabled','');
 	}
 	
@@ -439,7 +470,29 @@ function add_element(obj){
 		obj.form.appendChild(s);
 	}
 
-	document.getElementById("myform").action = "../export_excel.php";
-	document.getElementById("myform").submit();
-	
+	document.getElementById("myform").action = "./export_excel.php";
+	document.getElementById("myform").submit();	
 }
+
+// alert及confirm 取消顯示Ip及域名
+// window.alert = function(name){
+
+//         var iframe = document.createElement("IFRAME");
+//         iframe.style.display="none";
+//         iframe.setAttribute("src", 'data:text/plain,');
+//         document.documentElement.appendChild(iframe);
+//         window.frames[0].window.alert(name);
+//         iframe.parentNode.removeChild(iframe);
+//     }
+
+
+// window.confirm = function (message) {
+//             var iframe = document.createElement("IFRAME");
+//             iframe.style.display = "none";
+//             iframe.setAttribute("src", 'data:text/plain,');
+//             document.documentElement.appendChild(iframe);
+//             var alertFrame = window.frames[0];
+//             var result = alertFrame.window.confirm(message);
+//             iframe.parentNode.removeChild(iframe);
+//             return result;
+//     }

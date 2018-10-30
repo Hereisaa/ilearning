@@ -1,18 +1,18 @@
 <?php
 
     session_start();  
-    require_once "libs/Smarty.class.php";
-    $smarty = new Smarty();
-
-/*
-    if(isset($_SESSION["account"])){
-        $username = $_SESSION["account"];
+    $_SESSION["test_email"] = $_POST["test_email"];
+    /*
+    if(isset($_SESSION["test_email"])){
+        $username = $_SESSION["test_email"];
     }
     else{
         
         $username = NULL;
     }
 
+    
+    
     if($username==NULL){
         $smarty->assign("login", "login");
         $smarty->assign("login_text","登入");
@@ -25,15 +25,16 @@
         $smarty->assign("login_status",1);
 
     }
-*/
 
-    $postback = isset($_POST["postback"]);
-    if ($postback)
-    {
+    // 參與測驗人員 email 
+    if( isset($_POST["test_email"]) ){
         $_SESSION["test_email"] = $_POST["test_email"];
-        $smarty->display("normtest.html");
     }
-    else{
-        $smarty->display("pre_test_page.html");
-    }
+    
+    */
+    require_once "libs/Smarty.class.php";
+    $smarty = new Smarty();
+    
+    $smarty->display("normtest.html");
+    
 ?>
