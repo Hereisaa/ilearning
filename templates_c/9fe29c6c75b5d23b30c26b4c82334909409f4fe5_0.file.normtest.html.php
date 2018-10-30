@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-29 15:35:25
+/* Smarty version 3.1.33, created on 2018-10-30 08:39:20
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd71aade34ca6_84981191',
+  'unifunc' => 'content_5bd80aa8508565_88568498',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540823725,
+      1 => 1540885116,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd71aade34ca6_84981191 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd80aa8508565_88568498 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,92 +67,8 @@ function content_5bd71aade34ca6_84981191 (Smarty_Internal_Template $_smarty_tpl)
 </a></li> -->
 	</ul>
 	
-	<!-- 題前提示 -->
-	<div class="container text-center" id="pre_page">
-		<div class="row">
-			<h2><strong>越南語測驗</strong></h2>	
-		</div>
-		
-		<div class="row">
-				<h4>聽力測驗共有三大題，分為單元音、單輔音、雙輔音。</h4>
-				<h4>每大題共有兩部分(A)選出正確的字母(B)選出正確的讀音。</h4>
-		</div>
-		<div class="row" >
-			<!-- 範例區塊 -->
-			<div class="container" style="border: 1px solid #cecece; text-align: left; padding-bottom: 20px;">
-				<div class="container" >
-					<!-- 題號區 -->
-					<div class="container">
-						<h2><strong>一、單元音 (範例)</strong></h2>
-						<div class="col-sm-4">
-							<h2><strong>選出正確的字母 </strong> </h2>
-						</div>
-						<div class="col-sm-4"> 
-							<h2><strong>第x題 / 共28題</strong> </h2>
-						</div>
-					</div>
-					<!-- 音檔、選擇區 -->
-					<div class="container col-sm-8">
-						<!-- 音檔播放區 -->
-					    <div class="container" style="padding-top: 15px;">
-					    	<audio src="templates/audio/normtest/unitsound/q3.mp3" controls="controls" controlsList="nodownload" oncontextmenu="return false">
-					    	</audio>
-					    </div>
-					    <!-- 選擇區 -->
-					    <div class="container" style="padding-top: 15px">
-					    	<div class="row" style="padding-top: 10px; ">
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')">A : i</button>
-					    		</div>
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')">B : e</button>
-					    		</div>
-					    	</div>
-					    	<div class="row " style="padding-top: 10px; ">
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')">C : ư</button>
-					    		</div>
-					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')">D : ê</button>
-					    		</div>
-					    	</div>
-					    </div>
-					</div>
-					
-				    <!-- 確認區 -->
-				    <div class="container col-sm-3" >
-			    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="example_choosen_option"></span></strong></div>
-			    		<div class="row" style="padding-top: 10px"><button id="example_commit_btn" type="button" disabled="" class="btn" onclick="example_commit();">確認</button></div>
-			    		<div class="row"><p>(點擊A、B、C、D後，按下確認，即可進入下一題。)</p></div>
-			    	</div>
-				</div>
-			</div>
-		</div>
-		<!-- 表單填寫 -->
-		<div class="row" style="padding-top: 20px; justify-content: center;">
-			<div class="" >
-				<div>
-	       			<form id="form1" name="form1" action="register.php" method="post">
-		            	<input type="hidden" name="postback" value="true">
-		            	<div class="form-group" style="width: 75%;padding-left: 25%;">
-		                	<label for="account">電子信箱</label>
-		                	<input type="text" name="account" id="account" value="" placeholder="請填入電子信箱 example@gmail.com" class="form-control">
-		            	</div>
-
-		            	<!-- <div class="form-group" style="width: 75%;padding-left: 25%;">
-		                	<label for="username">暱稱</label>
-		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
-		            	</div>	 -->            
-	        		</form>
-	    		</div>
-				<div class="row" style="padding-top: 10px;">
-					<button  class="btn btn-success" onclick="start_test();" style="font-size: 40px">開始</button>
-				</div>
-			</div>
-		</div>	
-	</div>
 	<!-- 題目及測驗整體 -->
-	<div id="test_zone" class="container" style="display: none;">
+	<div id="test_zone" class="container" style="display: block;">
 		<!-- 第一部 -->
 		<div id="part1_container" class="container" >
 			<!-- 題號區 -->
@@ -281,7 +197,7 @@ function content_5bd71aade34ca6_84981191 (Smarty_Internal_Template $_smarty_tpl)
 
 			
 
-			<!-- 回到index.html -->
+			<!-- 回到index.html 並輸出excel-->
 			<form id="myform" method="POST">
 				<input type="button" value="回常模測試主頁" class="btn btn-primary" onclick="add_element(this);" ><br />
 			</form>

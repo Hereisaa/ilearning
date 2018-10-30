@@ -2,6 +2,7 @@
 
 // 測驗區變數
 var username,
+	download_excel,
 	account,
 	num ,
 	pre_page,
@@ -61,6 +62,7 @@ window.onload = function(){
 	num=1;
 	// username = document.getElementById("username");
 	test_email = document.getElementById("test_email");
+	download_excel = document.getElementById("download_excel");
 
 	//開始測驗前的注意事項
 	
@@ -129,6 +131,18 @@ function start_test() {
 	}
 	
 }
+// 下載excel
+function download_excel_click() {
+	// body...
+	if(test_email.value=="mingmin@gmail.nsysu.edu.tw"){
+		// 在這裡下載excel
+		alert("downloading..");
+
+	}else{
+		alert("此為管理員使用");
+	}
+}
+
 
 // pre_test_submit
 function pre_test_submit() {
