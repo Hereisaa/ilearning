@@ -15,6 +15,7 @@ var username,
 	// 第一部分變數
 	part1_container,
 	part1_question_type,
+	part1_question_type_content,
 	part1_question_num,
 	part1_audio,
 	part1_option_a ,
@@ -26,6 +27,7 @@ var username,
 	// 第二部分變數
 	part2_container,
 	part2_question_type,
+	part2_question_content,
 	part2_question_num,
 	part2_question,
 	part2_question_content,
@@ -79,6 +81,7 @@ window.onload = function(){
 	part1_container = document.getElementById("part1_container");	
 	part1_question_num = document.getElementById("part1_question_num");
 	part1_question_type = document.getElementById("part1_question_type");
+	part1_question_type_content = document.getElementById("part1_question_type_content");
 	part1_option_a = document.getElementById("part1_option_a");
 	part1_option_b = document.getElementById("part1_option_b");
 	part1_option_c = document.getElementById("part1_option_c");
@@ -90,6 +93,7 @@ window.onload = function(){
 	
 	part2_container = document.getElementById("part2_container");
 	part2_question_type = document.getElementById("part2_question_type");
+	part2_question_type_content = document.getElementById("part2_question_type_content");
 	part2_question_num = document.getElementById("part2_question_num");
 
 	part2_question = document.getElementById("part2_question");
@@ -182,6 +186,7 @@ function update_content(){
 		mode=0;
 		
 		part1_question_type.innerHTML = question_json1.question_type;
+		part1_question_type_content.innerHTML = question_json1.question_type_content;
 		part1_question_num.innerHTML=num;
 		
 		part1_option_a.innerHTML=question_json1.question[num-1].A;
@@ -198,6 +203,7 @@ function update_content(){
 
 		part2_question_num.innerHTML=num;
 		part2_question_type.innerHTML = question_json1.question_type;
+		part2_question_type_content.innerHTML = question_json1.question_type_content;
 		part2_question.innerHTML = "單元音";
 		part2_question_content.innerHTML = question_json1.question[num-1].question_text;
 		part2_audio_a.src = "templates/audio/normtest/"+question_json1.mp3_location+question_json1.question[num-1].mp3a;
@@ -213,6 +219,7 @@ function update_content(){
 		part2_container.style.display = "none";
 		
 		part1_question_type.innerHTML = question_json2.question_type;
+		part1_question_type_content.innerHTML = question_json2.question_type_content;
 		part1_question_num.innerHTML=num;
 		
 		part1_option_a.innerHTML=question_json2.question[num-11].A;
@@ -228,6 +235,7 @@ function update_content(){
 
 		part2_question_num.innerHTML=num;
 		part2_question_type.innerHTML = question_json2.question_type;
+		part2_question_type_content.innerHTML = question_json2.question_type_content;
 		part2_question.innerHTML = "單輔音 ";
 		part2_question_content.innerHTML = question_json2.question[num-11].question_text;
 		part2_audio_a.src = "templates/audio/normtest/"+question_json2.mp3_location+question_json2.question[num-11].mp3a;
@@ -242,6 +250,7 @@ function update_content(){
 		part2_container.style.display = "none";
 		
 		part1_question_type.innerHTML = question_json3.question_type;
+		part1_question_type_content.innerHTML = question_json3.question_type_content;
 		part1_question_num.innerHTML=num;
 		
 		part1_option_a.innerHTML=question_json3.question[num-21].A;
@@ -258,6 +267,7 @@ function update_content(){
 
 		part2_question_num.innerHTML=num;
 		part2_question_type.innerHTML = question_json3.question_type;
+		part2_question_type_content.innerHTML = question_json3.question_type_content;
 		part2_question.innerHTML = "雙輔音 ";
 		part2_question_content.innerHTML = question_json3.question[num-21].question_text;
 		part2_audio_a.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[num-21].mp3a;
@@ -352,35 +362,36 @@ function example_commit(){
 
 var question_json1 ={
 
-	"question_type":"一、 單元音：nguyên âm ",
+	"question_type":"一、 單元音：",
+	"question_type_content":"Nguyên âm",
 
 	"mp3_location":"unitsound/",
 
 	"question":[
 		{	"mp3":"q1.mp3",
-			"A":"Ơ ơ" ,	"B":"Â â" ,	"C":"I i" ,	"D":"E e"	},
+			"A":"Ơơ" ,	"B":"Ââ" ,	"C":"Ii" ,	"D":"Ee"	},
 		{	"mp3":"q2.mp3",
-			"A":"Aa" ,	"B":"Oo" , 	"C":"Ê ê", 	"D":"Â â"	},
+			"A":"Aa" ,	"B":"Oo" , 	"C":"Êê", 	"D":"Ââ"	},
 		{	"mp3":"q3.mp3",
-			"A":"i" ,	"B":"e" ,	"C":"ư" ,	"D":"ê"		},
+			"A":"Ii" ,	"B":"Ee" ,	"C":"Ưư" ,	"D":"Êê"		},
 		{	"mp3":"q4.mp3",
-			"A":"ơ" , "B":"a" , "C":"ô" , "D":"e"},
-		{	"question_text" : "o",
+			"A":"Ơơ" , "B":"Aa" , "C":"Ôô" , "D":"Ee"},
+		{	"question_text" : "Oo",
 			"mp3a":"q5/(A)Ô.mp3",	"mp3b":"q5/(B)O.mp3",	"mp3c":"q5/(C)Ơ.mp3",	"mp3d":"q5/(D)Ư.mp3",
 			"A":"ô" , "B":"o" , "C":"ơ" , "D":"ư"},
-		{	"question_text" : "Ơ",
+		{	"question_text" : "Ơơ",
 			"mp3a":"q6/(A)Ơ.mp3",	"mp3b":"q6/(B)Ư.mp3",	"mp3c":"q6/(C)A.mp3",	"mp3d":"q6/(D)I.mp3",
 			"A":"Ơ" , "B":"Ư" , "C":"A" , "D":"I"},
-		{	"question_text" : "ư",
+		{	"question_text" : "Ưư",
 			"mp3a":"q7/(A)U.mp3",	"mp3b":"q7/(B)Ê.mp3",	"mp3c":"q7/(C)Ư.mp3",	"mp3d":"q7/(D)Ă.mp3",
 			"A":"u" , "B":"ê" , "C":"ư" , "D":"â"},
-		{	"question_text" : "Ă",
+		{	"question_text" : "Ăă",
 			"mp3a":"q8/(A)O.mp3",	"mp3b":"q8/(B)Ă.mp3",	"mp3c":"q8/(C)A.mp3",	"mp3d":"q8/(D)E.mp3",
 			"A":"O" , "B":"Ă" , "C":"A" , "D":"E"},
-		{	"question_text" : "Ơ",
+		{	"question_text" : "Ơơ",
 			"mp3a":"q9/(A)Â.mp3",	"mp3b":"q9/(B)Ơ.mp3",	"mp3c":"q9/(C)Ư.mp3",	"mp3d":"q9/(D)A.mp3",
 			"A":"Â" , "B":"Ơ" , "C":"Ư" , "D":"A"},
-		{	"question_text" : "o",
+		{	"question_text" : "Oo",
 			"mp3a":"q10/(A)U.mp3",	"mp3b":"q10/(B)Ô.mp3",	"mp3c":"q10/(C)O.mp3",	"mp3d":"q10/(D)Ư.mp3",
 			"A":"u" , "B":"ô" , "C":"o" , "D":"ư"},
 
@@ -389,35 +400,36 @@ var question_json1 ={
 };
 
 var question_json2 = {
-	"question_type":"二、 單輔音：phụ âm đơn",
+	"question_type":"二、 單輔音：",
+	"question_type_content":"Phụ âm đơn",
 
 	"mp3_location":"singleconsonant/",
 
 	"question":[
 		{	"mp3":"q1.mp3",
-			"A":"B" ,	"B":"P" ,	"C":"Đ" ,	"D":"M"	},
+			"A":"Bb" ,	"B":"Pp" ,	"C":"Đđ" ,	"D":"Mm"	},
 		{	"mp3":"q2.mp3",
-			"A":"X" ,	"B":"L" , 	"C":"C", 	"D":"K"	},
+			"A":"Xx" ,	"B":"Ll" , 	"C":"Cc", 	"D":"Kk"	},
 		{	"mp3":"q3.mp3",
-			"A":"k" ,	"B":"y" ,	"C":"d" ,	"D":"q"	},
+			"A":"Kk" ,	"B":"Yy" ,	"C":"Dd" ,	"D":"Qq"	},
 		{	"mp3":"q4.mp3",
-			"A":"d" , "B":"r" , "C":"s" , "D":"đ"},
-		{	"question_text" : "đ",
+			"A":"Dd" , "B":"Rr" , "C":"Ss" , "D":"Đđ"},
+		{	"question_text" : "Đđ",
 			"mp3a":"q5/(A)L.mp3",	"mp3b":"q5/(B)Đ.mp3",	"mp3c":"q5/(C)C.mp3",	"mp3d":"q5/(D)N.mp3",
 			"A":"l" , "B":"đ" , "C":"c" , "D":"n"},
-		{	"question_text" : "s",
+		{	"question_text" : "Ss",
 			"mp3a":"q6/(A)C.mp3",	"mp3b":"q6/(B)G.mp3",	"mp3c":"q6/(C)S.mp3",	"mp3d":"q6/(D)X.mp3",
 			"A":"c" , "B":"g" , "C":"s" , "D":"x"},
-		{	"question_text" : "t",
+		{	"question_text" : "Tt",
 			"mp3a":"q7/(A)D.mp3",	"mp3b":"q7/(B)T.mp3",	"mp3c":"q7/(C)M.mp3",	"mp3d":"q7/(D)N.mp3",
 			"A":"d" , "B":"t" , "C":"m" , "D":"n"},
-		{	"question_text" : "G",
+		{	"question_text" : "Gg",
 			"mp3a":"q8/(A)C.mp3",	"mp3b":"q8/(B)L.mp3",	"mp3c":"q8/(C)Đ.mp3",	"mp3d":"q8/(D)G.mp3",
 			"A":"C" , "B":"L" , "C":"Đ" , "D":"G"},
-		{	"question_text" : "M",
+		{	"question_text" : "Mm",
 			"mp3a":"q9/(A)M.mp3",	"mp3b":"q9/(B)N.mp3",	"mp3c":"q9/(C)H.mp3",	"mp3d":"q9/(D)P.mp3",
 			"A":"M" , "B":"N" , "C":"H" , "D":"P"},
-		{	"question_text" : "p",
+		{	"question_text" : "Pp",
 			"mp3a":"q10/(A)H.mp3",	"mp3b":"q10/(B)L.mp3",	"mp3c":"q10/(C)P.mp3",	"mp3d":"q10/(D)Y.mp3",
 			"A":"h" , "B":"l" , "C":"p" , "D":"y"},
 
@@ -427,7 +439,8 @@ var question_json2 = {
 
 
 var question_json3 = {
-	"question_type":"三、雙輔音：Phụ âm kép",
+	"question_type":"三、雙輔音：",
+	"question_type_content":"Phụ âm kép",
 
 	"mp3_location":"doubleconsonant/",
 

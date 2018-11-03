@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-03 08:58:03
+/* Smarty version 3.1.33, created on 2018-11-03 08:38:19
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdd550b4de500_48923505',
+  'unifunc' => 'content_5bdd506bcc77c9_08608442',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '650b9db8814f81773b70660c19467aa463f0164b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\pre_test_page.html',
-      1 => 1541231883,
+      1 => 1541230699,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bdd550b4de500_48923505 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdd506bcc77c9_08608442 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -79,7 +79,7 @@ function content_5bdd550b4de500_48923505 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="container" >
 					<!-- 題號區 -->
 					<div class="container">
-						<h2><strong>一、單元音 <span style="font-family: 'Times New Roman', Times, serif;">Nguyên âm</span> (範例)</strong></h2>
+						<h2><strong>一、單元音 (範例)</strong></h2>
 						<div class="col-sm-4">
 							<h2><strong>請選出正確的字母 </strong> </h2>
 						</div>
@@ -98,18 +98,18 @@ function content_5bdd550b4de500_48923505 (Smarty_Internal_Template $_smarty_tpl)
 					    <div class="container" style="padding-top: 15px;"  >
 					    	<div class="row" style="padding-top: 10px; ">
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')" style="font-family: 'Times New Roman', Times, serif;">A : i</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')" >A : i</button>
 					    		</div>
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')" style="font-family: 'Times New Roman', Times, serif;">B : e</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')">B : e</button>
 					    		</div>
 					    	</div>
 					    	<div class="row " style="padding-top: 10px; ">
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')" style="font-family: 'Times New Roman', Times, serif;">C : ư</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')">C : ư</button>
 					    		</div>
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')" style="font-family: 'Times New Roman', Times, serif;">D : ê</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')">D : ê</button>
 					    		</div>
 					    	</div>
 					    </div>

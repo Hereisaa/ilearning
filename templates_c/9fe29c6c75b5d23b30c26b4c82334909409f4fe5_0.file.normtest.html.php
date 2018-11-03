@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 08:59:21
+/* Smarty version 3.1.33, created on 2018-11-03 08:54:04
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd80f598ec314_54644182',
+  'unifunc' => 'content_5bdd541cc79157_26446182',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1540886357,
+      1 => 1541231644,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdd541cc79157_26446182 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -58,7 +58,7 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
+	<ul id="navbar_ul" >
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
 		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
 .php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
@@ -73,7 +73,10 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 		<div id="part1_container" class="container" >
 			<!-- 題號區 -->
 			<div class="container">
-				<h2><strong><span id="part1_question_type"></span></strong></h2>
+				<h2 ><strong>
+					<span id="part1_question_type"></span>
+					<span id="part1_question_type_content" style="font-family: 'Times New Roman', Times, serif;"></span>
+				</strong></h2>
 				<div class="col-sm-4">
 					<h2><strong>選出正確的字母 </strong> </h2>
 				</div>
@@ -92,18 +95,18 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 			    <div class="container" style="padding-top: 15px">
 			    	<div class="row" style="padding-top: 10px; ">
 			    		<div class="col-sm-3" >
-			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('A');">A : <span id="part1_option_a">none</span></button>
+			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('A');" style="font-family: 'Times New Roman', Times, serif;">A : <span id="part1_option_a">none</span></button>
 			    		</div>
 			    		<div class="col-sm-3" >
-			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('B');">B : <span id="part1_option_b">none</span></button>
+			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('B');" style="font-family: 'Times New Roman', Times, serif;">B : <span id="part1_option_b">none</span></button>
 			    		</div>
 			    	</div>
 			    	<div class="row " style="padding-top: 10px; ">
 			    		<div class="col-sm-3" >
-			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('C');">C : <span id="part1_option_c">none</span> </button>
+			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('C');" style="font-family: 'Times New Roman', Times, serif;">C : <span id="part1_option_c">none</span> </button>
 			    		</div>
 			    		<div class="col-sm-3" >
-			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('D');">D : <span id="part1_option_d">none</span> </button>
+			    			<button type="button" class="btn btn-secondary btn-block" onclick="clickoption('D');" style="font-family: 'Times New Roman', Times, serif;">D : <span id="part1_option_d">none</span> </button>
 			    		</div>
 			    	</div>
 			    </div>
@@ -111,7 +114,7 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 			
 		    <!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part1_choosen_option" style="font-family: 'Times New Roman', Times, serif;"></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part1_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 		</div>
@@ -120,7 +123,10 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 		<div id="part2_container" class="container" style=" display: none;" >
 			<!-- 題號區 -->
 			<div class="container">
-				<h2><strong><span id="part2_question_type"></span></strong></h2>
+				<h2><strong>
+					<span id="part2_question_type"></span>
+					<span id="part2_question_type_content" style="font-family: 'Times New Roman', Times, serif;"></span>
+				</strong></h2>
 				<div class="col-sm-4">
 					<h2><strong>選出正確的發音 </strong> </h2>
 				</div>
@@ -132,7 +138,7 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 		   	<div class="container col-sm-8">
 				<div class="container col-sm-4 text-center" style="justify-content: center;"> 
 					<h3><strong id="part2_question"></strong></h3>
-					<h2 ><strong id="part2_question_content"> </strong></h2>
+					<h2 ><strong id="part2_question_content" style="font-family: 'Times New Roman', Times, serif;"> </strong></h2>
 				</div>
 				<div class="container col-sm-8" style="padding-top: 15px">
 					<div class="row" style="padding-top: 10px">
@@ -157,7 +163,7 @@ function content_5bd80f598ec314_54644182 (Smarty_Internal_Template $_smarty_tpl)
 			</div>	
 			<!-- 確認區 -->
 		    <div class="container col-sm-3" >
-	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" ></span>　</strong></div>
+	    		<div class="row" style="font-size: 50px"><strong>選擇:<span id="part2_choosen_option" style="font-family: 'Times New Roman', Times, serif;"></span>　</strong></div>
 	    		<div class="row" style="padding-top: 10px"><button id="part2_commit_btn" type="button" disabled="" onclick="commitanswer();" class="btn">確認</button></div>
 	    	</div>
 
