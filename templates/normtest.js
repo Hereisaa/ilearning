@@ -407,7 +407,7 @@ var question_json2 = {
 
 	"question":[
 		{	"mp3":"q1.mp3",
-			"A":"Bb" ,	"B":"Pp" ,	"C":"Đđ" ,	"D":"Mm"	},
+			"A":"Bb" ,	"B":"Hh" ,	"C":"Đđ" ,	"D":"Mm"	},
 		{	"mp3":"q2.mp3",
 			"A":"Xx" ,	"B":"Ll" , 	"C":"Cc", 	"D":"Kk"	},
 		{	"mp3":"q3.mp3",
