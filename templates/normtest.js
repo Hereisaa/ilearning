@@ -389,14 +389,14 @@ var question_json1 ={
 			"mp3a":"q8/(A)O.mp3",	"mp3b":"q8/(B)Ă.mp3",	"mp3c":"q8/(C)A.mp3",	"mp3d":"q8/(D)E.mp3",
 			"A":"O" , "B":"Ă" , "C":"A" , "D":"E"},
 		{	"question_text" : "Ơơ",
-			"mp3a":"q9/(A)Â.mp3",	"mp3b":"q9/(B)Ơ.mp3",	"mp3c":"q9/(C)Ư.mp3",	"mp3d":"q9/(D)A.mp3",
-			"A":"Â" , "B":"Ơ" , "C":"Ư" , "D":"A"},
-		{	"question_text" : "Oo",
+			"mp3a":"q9/(A)Â.mp3",	"mp3b":"q9/(B)I.mp3",	"mp3c":"q9/(C)Ư.mp3",	"mp3d":"q9/(D)A.mp3",
+			"A":"Â" , "B":"Ii" , "C":"Ư" , "D":"A"},
+		{	"question_text" : "Uu",
 			"mp3a":"q10/(A)U.mp3",	"mp3b":"q10/(B)Ô.mp3",	"mp3c":"q10/(C)O.mp3",	"mp3d":"q10/(D)Ư.mp3",
 			"A":"u" , "B":"ô" , "C":"o" , "D":"ư"},
 
 	],
-	"answer":["B","A","D","D","B","A","C","B","B","C"]
+	"answer":["B","A","D","D","B","A","C","B","B","A"]
 };
 
 var question_json2 = {
