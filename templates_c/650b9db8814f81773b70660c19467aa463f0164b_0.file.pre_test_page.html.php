@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-03 08:58:03
+/* Smarty version 3.1.33, created on 2018-11-12 04:34:43
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdd550b4de500_48923505',
+  'unifunc' => 'content_5be8f4d34121c3_19896821',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '650b9db8814f81773b70660c19467aa463f0164b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\pre_test_page.html',
-      1 => 1541231883,
+      1 => 1541993683,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bdd550b4de500_48923505 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be8f4d34121c3_19896821 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,6 +144,9 @@ function content_5bdd550b4de500_48923505 (Smarty_Internal_Template $_smarty_tpl)
 	    		</div>
 				<div class="row" style="padding-top: 10px;">
 					<button  class="btn btn-success" onclick="pre_test_submit();" style="font-size: 40px">開始</button>
+				</div>
+				<div class="row">
+					<strong>建議使用Chrome瀏覽器</strong>
 				</div>
 			</div>
 		</div>	

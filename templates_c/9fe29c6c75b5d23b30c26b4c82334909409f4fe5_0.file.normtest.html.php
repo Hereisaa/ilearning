@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-03 08:54:04
+/* Smarty version 3.1.33, created on 2018-11-12 13:59:51
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\normtest.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdd541cc79157_26446182',
+  'unifunc' => 'content_5be97947361688_09812383',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fe29c6c75b5d23b30c26b4c82334909409f4fe5' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\normtest.html',
-      1 => 1541231644,
+      1 => 1542027591,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bdd541cc79157_26446182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be97947361688_09812383 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -182,20 +182,21 @@ function content_5bdd541cc79157_26446182 (Smarty_Internal_Template $_smarty_tpl)
     <!-- 測驗結束後 -->
     <div id="thank_zone" class="container" style="display: none; ">
     	<!-- 作答情形區 -->
-    	<div class="container col-sm-3 col-sm-offset-4 text-center">
+    	<div class="container">
     	   	<h2 class="row">感謝您的參與 </h2>
-    	   	<h3 class="row">正確率 : <span id="correct_num"></span>/28</h3>
-    	   	<table class="table" style="display: none;">
+    	   	<h3 class="row">答對題數 : <span id="correct_num"></span>/28</h3>
+    	   	<table class="table" >
 	    		<thead>
 	    			<tr>
-	    				<th>Question</th>
-	    				<th>YourAnswer</th>
-	    				<th>CorrectAnswer</th>
+	    				<th>題數</th>
+	    				<th>答案</th>
+	    				<th>讀音</th>
+	    				<th>您的答案</th>
 	    				<th></th>
 	    			</tr>
 				</thead>
 				
-	    		<tbody id="result_tbody">
+	    		<tbody id="result_tbody" >
 	    			
 				</tbody>
 				

@@ -52,7 +52,7 @@ var  thank_zone,
 		"email":"vvv@gmail.com",
 		"result":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 	},
-	correct_answer_array = ["B","A","D","D","B","A","C","B","B","C","A","C","D","A","B","C","B","D","A","C","B","C","A","D","A","C","B","D"];
+	correct_answer_array = ["B","A","D","D","B","A","C","B","B","A","A","C","D","A","B","C","B","D","A","C","B","C","A","D","A","C","B","D"];
 
 // email rule
 var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
@@ -316,27 +316,67 @@ function commitanswer(){
 
 function result(){
 	var correct = 0;
-	for (var i=0 ; i<answer_array.length; i++) {
+
+	for (var i = 0; i <answer_array.length ; i++) {
 		var row = result_tbody.insertRow(i);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
 		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		cell1.innerHTML = "第"+(i+1).toString()+"題";
+		
+		if(i<10){
+			var answer_audio = document.createElement('audio');
+			answer_audio.src = "templates/audio/normtest/"+question_json1.mp3_location+question_json1.question[i].mp3;
+			answer_audio.controls = true;
+			answer_audio.setAttribute('controlsList','nodownload');
+			cell2.innerHTML = question_json1.question[i][correct_answer_array[i]];
+			cell3.appendChild(answer_audio);
+			cell4.innerHTML = question_json1.question[i][answer_array[i]];
+			if(cell2.innerHTML!=cell4.innerHTML){
+				cell4.style.color = 'red';
+			}
+		}else if( 10<=i && i<20 ){
+			var answer_audio = document.createElement('audio');
+			answer_audio.src = "templates/audio/normtest/"+question_json2.mp3_location+question_json2.question[i-10].mp3;
+			answer_audio.controls = true;
+			answer_audio.setAttribute('controlsList','nodownload');
+			cell2.innerHTML = question_json2.question[i-10][correct_answer_array[i]];
+			cell3.appendChild(answer_audio);
+			cell4.innerHTML = question_json2.question[i-10][answer_array[i]];
+			if(cell2.innerHTML!=cell4.innerHTML){
+				cell4.style.color = 'red';
+			}
+		}else {
+			var answer_audio = document.createElement('audio');
+			answer_audio.src = "templates/audio/normtest/"+question_json3.mp3_location+question_json3.question[i-20].mp3;
+			answer_audio.controls = true;
+			answer_audio.setAttribute('controlsList','nodownload');
+			cell2.innerHTML = question_json3.question[i-20][correct_answer_array[i]];
+			cell3.appendChild(answer_audio);
+			cell4.innerHTML = question_json3.question[i-20][answer_array[i]];
+			if(cell2.innerHTML!=cell4.innerHTML){
+				cell4.style.color = 'red';
+			}
+		}
 
-		cell1.innerHTML = "Q"+(i+1).toString();
-		cell2.innerHTML = answer_array[i];
-		cell3.innerHTML = correct_answer_array[i];
+
+		// cell2.innerHTML = correct_answer_array[i];
+		// cell3.innerHTML = answer_array[i];
 
 		// 輸出結果
-		if(cell2.innerHTML==cell3.innerHTML){
-			output_true_false_table(i,1);
+		if(cell2.innerHTML==cell4.innerHTML){
+			true_false_table.result[i]=1;
 			correct++;
 		}
-		else 
-			output_true_false_table(i,0);
+		else {
+			true_false_table.result[i]=0;
+		}
 	}
 	correct_num.innerHTML = correct;
 	// alert最後結果 0或1
 	//alert(true_false_table.result);
+
 }
 
 
@@ -370,28 +410,37 @@ var question_json1 ={
 	"question":[
 		{	"mp3":"q1.mp3",
 			"A":"Ơơ" ,	"B":"Ââ" ,	"C":"Ii" ,	"D":"Ee"	},
+
 		{	"mp3":"q2.mp3",
 			"A":"Aa" ,	"B":"Oo" , 	"C":"Êê", 	"D":"Ââ"	},
+
 		{	"mp3":"q3.mp3",
 			"A":"Ii" ,	"B":"Ee" ,	"C":"Ưư" ,	"D":"Êê"		},
+
 		{	"mp3":"q4.mp3",
 			"A":"Ơơ" , "B":"Aa" , "C":"Ôô" , "D":"Ee"},
-		{	"question_text" : "Oo",
+
+		{	"question_text" : "Oo","mp3":"q5/(B)O.mp3",
 			"mp3a":"q5/(A)Ô.mp3",	"mp3b":"q5/(B)O.mp3",	"mp3c":"q5/(C)Ơ.mp3",	"mp3d":"q5/(D)Ư.mp3",
 			"A":"ô" , "B":"o" , "C":"ơ" , "D":"ư"},
-		{	"question_text" : "Ơơ",
+
+		{	"question_text" : "Ơơ", "mp3":"q6/(A)Ơ.mp3",
 			"mp3a":"q6/(A)Ơ.mp3",	"mp3b":"q6/(B)Ư.mp3",	"mp3c":"q6/(C)A.mp3",	"mp3d":"q6/(D)I.mp3",
 			"A":"Ơ" , "B":"Ư" , "C":"A" , "D":"I"},
-		{	"question_text" : "Ưư",
+
+		{	"question_text" : "Ưư", "mp3":"q7/(C)Ư.mp3",
 			"mp3a":"q7/(A)U.mp3",	"mp3b":"q7/(B)Ê.mp3",	"mp3c":"q7/(C)Ư.mp3",	"mp3d":"q7/(D)Ă.mp3",
 			"A":"u" , "B":"ê" , "C":"ư" , "D":"â"},
-		{	"question_text" : "Ăă",
+
+		{	"question_text" : "Ăă", "mp3":"q8/(B)Ă.mp3",
 			"mp3a":"q8/(A)O.mp3",	"mp3b":"q8/(B)Ă.mp3",	"mp3c":"q8/(C)A.mp3",	"mp3d":"q8/(D)E.mp3",
 			"A":"O" , "B":"Ă" , "C":"A" , "D":"E"},
-		{	"question_text" : "Ơơ",
+
+		{	"question_text" : "Ii", "mp3":"q9/(B)I.mp3",
 			"mp3a":"q9/(A)Â.mp3",	"mp3b":"q9/(B)I.mp3",	"mp3c":"q9/(C)Ư.mp3",	"mp3d":"q9/(D)A.mp3",
 			"A":"Â" , "B":"Ii" , "C":"Ư" , "D":"A"},
-		{	"question_text" : "Uu",
+
+		{	"question_text" : "Uu", "mp3":"q10/(A)U.mp3",
 			"mp3a":"q10/(A)U.mp3",	"mp3b":"q10/(B)Ô.mp3",	"mp3c":"q10/(C)O.mp3",	"mp3d":"q10/(D)Ư.mp3",
 			"A":"u" , "B":"ô" , "C":"o" , "D":"ư"},
 
@@ -408,28 +457,37 @@ var question_json2 = {
 	"question":[
 		{	"mp3":"q1.mp3",
 			"A":"Bb" ,	"B":"Hh" ,	"C":"Đđ" ,	"D":"Mm"	},
+
 		{	"mp3":"q2.mp3",
 			"A":"Xx" ,	"B":"Ll" , 	"C":"Cc", 	"D":"Kk"	},
+
 		{	"mp3":"q3.mp3",
 			"A":"Kk" ,	"B":"Yy" ,	"C":"Dd" ,	"D":"Qq"	},
+
 		{	"mp3":"q4.mp3",
 			"A":"Dd" , "B":"Rr" , "C":"Ss" , "D":"Đđ"},
-		{	"question_text" : "Đđ",
+
+		{	"question_text" : "Đđ", "mp3":"q5/(B)Đ.mp3",
 			"mp3a":"q5/(A)L.mp3",	"mp3b":"q5/(B)Đ.mp3",	"mp3c":"q5/(C)C.mp3",	"mp3d":"q5/(D)N.mp3",
 			"A":"l" , "B":"đ" , "C":"c" , "D":"n"},
-		{	"question_text" : "Ss",
+
+		{	"question_text" : "Ss", "mp3":"q6/(C)S.mp3",
 			"mp3a":"q6/(A)C.mp3",	"mp3b":"q6/(B)G.mp3",	"mp3c":"q6/(C)S.mp3",	"mp3d":"q6/(D)X.mp3",
 			"A":"c" , "B":"g" , "C":"s" , "D":"x"},
-		{	"question_text" : "Tt",
+
+		{	"question_text" : "Tt", "mp3":"q7/(B)T.mp3",
 			"mp3a":"q7/(A)D.mp3",	"mp3b":"q7/(B)T.mp3",	"mp3c":"q7/(C)M.mp3",	"mp3d":"q7/(D)N.mp3",
 			"A":"d" , "B":"t" , "C":"m" , "D":"n"},
-		{	"question_text" : "Gg",
+
+		{	"question_text" : "Gg", "mp3":"q8/(D)G.mp3",
 			"mp3a":"q8/(A)C.mp3",	"mp3b":"q8/(B)L.mp3",	"mp3c":"q8/(C)Đ.mp3",	"mp3d":"q8/(D)G.mp3",
 			"A":"C" , "B":"L" , "C":"Đ" , "D":"G"},
-		{	"question_text" : "Mm",
+
+		{	"question_text" : "Mm", "mp3":"q9/(A)M.mp3",
 			"mp3a":"q9/(A)M.mp3",	"mp3b":"q9/(B)N.mp3",	"mp3c":"q9/(C)H.mp3",	"mp3d":"q9/(D)P.mp3",
 			"A":"M" , "B":"N" , "C":"H" , "D":"P"},
-		{	"question_text" : "Pp",
+
+		{	"question_text" : "Pp", "mp3":"q10/(C)P.mp3",
 			"mp3a":"q10/(A)H.mp3",	"mp3b":"q10/(B)L.mp3",	"mp3c":"q10/(C)P.mp3",	"mp3d":"q10/(D)Y.mp3",
 			"A":"h" , "B":"l" , "C":"p" , "D":"y"},
 
@@ -447,22 +505,29 @@ var question_json3 = {
 	"question":[
 		{	"mp3":"q1.mp3",
 			"A":"GH gh" ,	"B":"CH ch" ,	"C":"TR tr" ,	"D":"NG ng"	},
+
 		{	"mp3":"q2.mp3",
 			"A":"NH nh" ,	"B":"TH th" , 	"C":"GI gi", 	"D":"NG ng"	},
+
 		{	"mp3":"q3.mp3",
 			"A":"KH kh" ,	"B":"GH gh" ,	"C":"PH ph" ,	"D":"QU qu"	},
+
 		{	"mp3":"q4.mp3",
 			"A":"QU qu" , "B":"PH ph" , "C":"TR tr" , "D":"NH nh"},
-		{	"question_text" : "PH ph",
+
+		{	"question_text" : "PH ph", "mp3":"q5/(A)PH.mp3",
 			"mp3a":"q5/(A)PH.mp3",	"mp3b":"q5/(B)TH.mp3",	"mp3c":"q5/(C)NG-NGH.mp3",	"mp3d":"q5/(D)GI.mp3",
 			"A":"PH ph" , "B":"TH th" , "C":"NG ng" , "D":"GI gi"},
-		{	"question_text" : "TR tr",
+
+		{	"question_text" : "TR tr", "mp3":"q6/(C)TR.mp3",
 			"mp3a":"q6/(A)TH.mp3",	"mp3b":"q6/(B)GH.mp3",	"mp3c":"q6/(C)TR.mp3",	"mp3d":"q6/(D)PH.mp3",
 			"A":"TH th" , "B":"GH gh" , "C":"TR tr" , "D":"PH ph"},
-		{	"question_text" : "GH gh",
+
+		{	"question_text" : "GH gh", "mp3":"q7/(B)GH.mp3",
 			"mp3a":"q7/(A)TR.mp3",	"mp3b":"q7/(B)GH.mp3",	"mp3c":"q7/(C)TH.mp3",	"mp3d":"q7/(D)QU.mp3",
 			"A":"TR tr" , "B":"GH gh" , "C":"TH th" , "D":"Qu qu"},
-		{	"question_text" : "NG ng",
+
+		{	"question_text" : "NG ng", "mp3":"q8/(D)NG-NGH.mp3",
 			"mp3a":"q8/(A)GH.mp3",	"mp3b":"q8/(B)NH.mp3",	"mp3c":"q8/(C)PH.mp3",	"mp3d":"q8/(D)NG-NGH.mp3",
 			"A":"GH gh" , "B":"NH nh" , "C":"PH ph" , "D":"NG ng"}
 
