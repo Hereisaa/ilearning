@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-29 22:43:13
+/* Smarty version 3.1.33, created on 2018-12-02 11:19:14
   from 'C:\Users\user\Documents\GitHub\ilearning\templates\pre_test_page.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd77ef17c1ae2_19811102',
+  'unifunc' => 'content_5c03b1a2ab53d3_93242640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61053a7b4f5659014397571e92971db0f0797a41' => 
     array (
       0 => 'C:\\Users\\user\\Documents\\GitHub\\ilearning\\templates\\pre_test_page.html',
-      1 => 1540849371,
+      1 => 1543582326,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd77ef17c1ae2_19811102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c03b1a2ab53d3_93242640 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -58,13 +58,9 @@ function content_5bd77ef17c1ae2_19811102 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<!-- 登入後資訊區 navbar-->
-	<ul id="navbar_ul" style="font-family: Microsoft JhengHei;">
+	<ul id="navbar_ul" >
 		<li id="navbar_li"><a class="active" href="normtest.php" class="nav navbar-inverse" >越南語言測驗</a></li>
-		<!-- <li id="navbar_li" style="float:right;"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
-.php" ><span id="username" value="<?php echo $_smarty_tpl->tpl_vars['login_status']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
-</span><?php echo $_smarty_tpl->tpl_vars['login_text']->value;?>
-</a></li> -->
+		<li id="navbar_li" style="float:right"><a class="active" class="nav navbar-inverse" onclick="download_excel_click();">下載</a></li>
 	</ul>
 	
 	<!-- 題前提示 -->
@@ -83,7 +79,7 @@ function content_5bd77ef17c1ae2_19811102 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="container" >
 					<!-- 題號區 -->
 					<div class="container">
-						<h2><strong>一、單元音 (範例)</strong></h2>
+						<h2><strong>一、單元音 <span style="font-family: 'Times New Roman', Times, serif;">Nguyên âm</span> (範例)</strong></h2>
 						<div class="col-sm-4">
 							<h2><strong>請選出正確的字母 </strong> </h2>
 						</div>
@@ -99,21 +95,21 @@ function content_5bd77ef17c1ae2_19811102 (Smarty_Internal_Template $_smarty_tpl)
 					    	</audio>
 					    </div>
 					    <!-- 選擇區 -->
-					    <div class="container" style="padding-top: 15px">
+					    <div class="container" style="padding-top: 15px;"  >
 					    	<div class="row" style="padding-top: 10px; ">
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')">A : i</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('A')" style="font-family: 'Times New Roman', Times, serif;">A : i</button>
 					    		</div>
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')">B : e</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('B')" style="font-family: 'Times New Roman', Times, serif;">B : e</button>
 					    		</div>
 					    	</div>
 					    	<div class="row " style="padding-top: 10px; ">
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')">C : ư</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('C')" style="font-family: 'Times New Roman', Times, serif;">C : ư</button>
 					    		</div>
 					    		<div class="col-sm-3" >
-					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')">D : ê</button>
+					    			<button type="button" class="btn btn-secondary btn-block" onclick="example_clickoption('D')" style="font-family: 'Times New Roman', Times, serif;">D : ê</button>
 					    		</div>
 					    	</div>
 					    </div>
@@ -143,10 +139,14 @@ function content_5bd77ef17c1ae2_19811102 (Smarty_Internal_Template $_smarty_tpl)
 		                	<label for="username">暱稱</label>
 		                	<input type="text" name="username" id="username" value="" placeholder="請填入暱稱" class="form-control">
 		            	</div>	 -->            
-	        		</form>
+					</form>
+
 	    		</div>
 				<div class="row" style="padding-top: 10px;">
 					<button  class="btn btn-success" onclick="pre_test_submit();" style="font-size: 40px">開始</button>
+				</div>
+				<div class="row">
+					<strong>建議使用Chrome瀏覽器</strong>
 				</div>
 			</div>
 		</div>	
