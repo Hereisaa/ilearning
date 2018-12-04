@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-02 12:02:18
+/* Smarty version 3.1.33, created on 2018-12-04 09:49:59
   from 'C:\Users\user\Documents\GitHub\ilearning\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c03bbba1473c4_06407169',
+  'unifunc' => 'content_5c063fb7c8dc66_11540136',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b2e902b920cea7b69e92da8dac9fef7feeff831' => 
     array (
       0 => 'C:\\Users\\user\\Documents\\GitHub\\ilearning\\templates\\index.html',
-      1 => 1543748466,
+      1 => 1543913398,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c03bbba1473c4_06407169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c063fb7c8dc66_11540136 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
 
@@ -40,9 +40,13 @@ function content_5c03bbba1473c4_06407169 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ type="text/javascript" src="templates/review.js"><?php echo '</script'; ?>
+>
 
     <link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
     <link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
+
 
 </head>
 <body>
@@ -114,7 +118,7 @@ function content_5c03bbba1473c4_06407169 (Smarty_Internal_Template $_smarty_tpl)
     <div class="col" align="center" >
         <h3 style="font-family: Microsoft JhengHei; font-weight: bold;" align="center">複習</h3>   
         <p>
-            <a class="btn btn-primary btn-lg active" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+            <a class="btn btn-primary btn-lg active" data-toggle="collapse" onclick="review_show();" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1" >
                 字母
             </a>
             <a class="btn btn-primary btn-lg active" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
@@ -124,19 +128,31 @@ function content_5c03bbba1473c4_06407169 (Smarty_Internal_Template $_smarty_tpl)
                 句型
             </a>
         </p>
-        <div class="collapse" id="collapse1">
-            <div class="card card-body" style="border-color: black;">
-                東西放這邊1
+        
+        <div class="col-sm-6">
+            <div class="collapse" id="collapse1">
+                <div class="card card-body" style="border-color: black;" >
+                    <table class="table" >
+                        <thead>
+                            <tr align="center"> 
+                                <th>題數</th>
+                                <th>答案</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cllapse1_tbody" align="center"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
+
         <div class="collapse" id="collapse2" style="padding-top: 5px;">
             <div class="card card-body" style="border-color: black;">
-                東西放這邊2
+                <!--東西放這邊2-->
             </div>
         </div>
         <div class="collapse" id="collapse3" style="padding-top: 5px;">
             <div class="card card-body" style="border-color: black;">
-                東西放這邊3
+                <!--東西放這邊3-->
             </div>
         </div>
     </div>
