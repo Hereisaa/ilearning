@@ -1,4 +1,4 @@
-
+var home_page_path = "index.html";
 
 // 測驗區變數
 var username,
@@ -402,27 +402,18 @@ function example_commit(){
 }
 
 function complete(){
-	var p = true_false_table.result;
+	var faultornot=0;
+	for (var i = 0; i < true_false_table.result.length; i++) {
+		if(true_false_table.result[i]==0)
+			faultornot=1;
+	}
+	if (faultornot==1) {
+			window.location.href = "game.html?"+true_false_table.result;
+	}else{
+		window.location.href = home_page_path;
+	}
 
-	var f = document.createElement("form");
-	//f.setAttribute('method',"post");
-
-	f.setAttribute('action',"game.html");
 	
-
-	var i = document.createElement("input"); //input element, text
-	i.setAttribute('type',"hidden");
-	i.setAttribute('name',"username");
-	i.setAttribute('value',p);
-
-	var s = document.createElement("input"); //input element, Submit button
-	s.setAttribute('type',"submit");
-	s.setAttribute('value',"Send data");
-
-	f.appendChild(i);
-	f.appendChild(s);
-	document.body.appendChild(f);
-	f.submit();
 }
 
 // 假題庫 part1

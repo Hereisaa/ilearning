@@ -58,9 +58,13 @@ var context;
 var pressobj,collision_dst;
 var audio_path = "audio/teach/";
 var background_path = "PIC/game/tree_background.jpg";
+var test_result;
 
 
 window.onload=function(){
+    test_result = window.location.search.substring(1,window.location.search.length);
+    console.log(test_result);
+
     var canvas = document.getElementById("canvas");
     context = canvas.getContext("2d");
     canvas.style.backgroundImage = "url('"+background_path+"')";
@@ -285,7 +289,7 @@ window.onload=function(){
 
 function complete(){
     
-    window.location.href = "teach.html?aa=1&bb=2";
+    window.location.href = "teach.html?"+test_result;
 
 }
 
