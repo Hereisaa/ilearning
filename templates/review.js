@@ -19,4 +19,9 @@ function review_show(){
 	}
 }
 
+// 導向 teach.html
+function teach_page(){
+	window.location.href = "/templates/teach.html";
+}
+
 
