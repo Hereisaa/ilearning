@@ -1,5 +1,6 @@
 var capital_json = {"capital":["A","Ă","Â","E","Ê","I","O","Ô","Ơ","U","Ư"]}
 var lowercase_json = {"lowercase":["a","ă","â","e","ê","i","o","ô","ơ","u","ư"]};
+var playaudio_icon_path = "PIC/game/playaudio.jpg";
 
 var source_para = [
     {word:"A",x:40,y:660},
@@ -59,6 +60,7 @@ var pressobj,collision_dst;
 var audio_path = "audio/teach/";
 var background_path = "PIC/game/tree_background.jpg";
 var test_result;
+var old = {x:0,y:0};
 
 
 window.onload=function(){
@@ -81,7 +83,9 @@ window.onload=function(){
         rectager[i].word = source_para[i].word;
         rectager[i].x = source_para[i].x;
         rectager[i].y = source_para[i].y;
-        // 渲染小球
+        // rectager[i].showtext = 1;
+        rectager[i].showimage = 1;
+        // 渲染音檔
         rectager[i].draw(context);
     }
 
@@ -92,6 +96,7 @@ window.onload=function(){
         target[i].audio_src = audio_path+target_para[i].word+".mp3";
         target[i].x = target_para[i].x;
         target[i].y = target_para[i].y;
+        target[i].showtext = 1;
         // 渲染目標
         target[i].draw(context);
     }
@@ -135,26 +140,38 @@ window.onload=function(){
 
     // 创建画球函数
     function Rectager() {
-        this.word="";
+       this.word="";
       this.x = 0;
       this.y = 0;
-      this.width = 10;
-      this.height = 10;
+      this.width = 30;
+      this.height = 30;
       this.fillStyle = "#f85455";
       this.audio_src = "";
-        this.filltext = 0;
-      
+      this.filltext = 0;
+      this.showtext = 0;
+      this.showimage = 0;
+
       this.draw = function(cxt) {
         cxt.beginPath();
         cxt.fillStyle = this.fillStyle;
         cxt.font = "50px Arial";
-        cxt.fillRect(this.x,this.y,this.width,this.height);
-        if(this.filltext==1)
-            cxt.fillText(this.word,this.x,this.y);
-        else
-            cxt.strokeText(this.word,this.x,this.y);
+        
+        if(this.showtext==1){
+            cxt.fillRect(this.x,this.y,this.width,this.height);
+            if(this.filltext==1)
+                cxt.fillText(this.word,this.x,this.y);
+            else
+                cxt.strokeText(this.word,this.x,this.y);
+        }
+        if(this.showimage==1){
+            image = new Image();
+            image.src = playaudio_icon_path;
+            cxt.drawImage(image,this.x,this.y,this.width,this.height);
+        }
+        
         cxt.closePath();
       }
+
     };
     // 获得当前鼠标位置
     function getMouse(ev) {
@@ -198,11 +215,15 @@ window.onload=function(){
                 // 记录鼠标按下时，鼠标与矩形中心的距离
                 dx = mouse.x - rectager[i].x;
                 dy = mouse.y - rectager[i].y;
+
+
                 
           }
       }
-      
+      old.x = rectager[pressobj].x;
+      old.y = rectager[pressobj].y; 
       console.log("rectager:"+rectager[pressobj].x+","+rectager[pressobj].y+"Mouse:"+mouse.x+","+mouse.y);
+      console.log("pressobj : oldx:"+old.x+",oldy"+old.y);
     }
 
     function mouseMove(ev) {
@@ -232,7 +253,7 @@ window.onload=function(){
     function mouseUp(ev) {
         // 标示鼠标弹起事件
         isPressed = false;
-        
+        collision = 0;
         // 判斷碰撞到哪一個obj
         for (var i = 0; i < target.length; i++) {
                 
@@ -251,20 +272,32 @@ window.onload=function(){
             minX = ax <= bx ? ax : bx;
             minY = ay <= by ? ay : by;
 
-            if(maxX - minX <= aw+bw && maxY - minY <= ah+bh){
-                    
+            if(maxX - minX <= aw+bw && maxY - minY <= ah+bh){                   
                 console.log("collision_src:"+pressobj+" scollision_dst:"+i);
                 collision_dst = i;
-        
+                collision = 1; 
             }
         }
        // 放開鼠標後，判斷是否成功配對
-       if(rectager[pressobj].word==target[collision_dst].word ){
-            console.log("src:"+pressobj+"dst:"+collision_dst);
-            rectager.splice(pressobj,1);
-            // target.splice(collision_dst,1);
-            target[collision_dst].filltext=1;
+       if(collision==1){
+            if(rectager[pressobj].word==target[collision_dst].word ){
+                console.log("collision");
+
+                console.log("src:"+pressobj+"dst:"+collision_dst);
+                rectager.splice(pressobj,1);
+                // target.splice(collision_dst,1);
+                target[collision_dst].filltext=1;
+            }
+        }else{
+            // 配對失敗，音檔回去
+            console.log("no_collision");
+            console.log("pressobj : oldx:"+old.x+",oldy"+old.y);
+            rectager[pressobj].x=old.x;
+            rectager[pressobj].y=old.y;
         }
+       
+        
+        
 
         // 再從畫一次
         context.clearRect(0, 0, canvas.width, canvas.height);

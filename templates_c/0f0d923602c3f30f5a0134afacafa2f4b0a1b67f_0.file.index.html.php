@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-03 05:06:40
+/* Smarty version 3.1.33, created on 2018-12-04 12:50:30
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c04abd04f6ec2_84528496',
+  'unifunc' => 'content_5c066a06d14917_45497760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f0d923602c3f30f5a0134afacafa2f4b0a1b67f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\index.html',
-      1 => 1543808617,
+      1 => 1543924217,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c04abd04f6ec2_84528496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c066a06d14917_45497760 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
 
@@ -40,9 +40,13 @@ function content_5c04abd04f6ec2_84528496 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ type="text/javascript" src="templates/review.js"><?php echo '</script'; ?>
+>
 
     <link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
     <link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
+
 
 </head>
 <body>
@@ -91,7 +95,7 @@ function content_5c04abd04f6ec2_84528496 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-sm-6" id="difficult">
                 <h3 style="font-family: Microsoft JhengHei; font-weight: bold;" align="center">程度列表</h3>
                 <div class="list-group" align="center">
-                    <a href="#1" class="list-group-item list-group-item-action">字母</a>
+                    <a class="list-group-item list-group-item-action" onclick="teach_page();">字母</a>
                     <a href="#2" class="list-group-item list-group-item-action">日常對話(1)</a>
                     <a href="#3" class="list-group-item list-group-item-action">...</a>
                     <a href="#4" class="list-group-item list-group-item-action">...</a>
@@ -114,7 +118,7 @@ function content_5c04abd04f6ec2_84528496 (Smarty_Internal_Template $_smarty_tpl)
     <div class="col" align="center" >
         <h3 style="font-family: Microsoft JhengHei; font-weight: bold;" align="center">複習</h3>   
         <p>
-            <a class="btn btn-primary btn-lg active" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+            <a class="btn btn-primary btn-lg active" data-toggle="collapse" onclick="review_show();" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1" >
                 字母
             </a>
             <a class="btn btn-primary btn-lg active" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
@@ -124,19 +128,31 @@ function content_5c04abd04f6ec2_84528496 (Smarty_Internal_Template $_smarty_tpl)
                 句型
             </a>
         </p>
-        <div class="collapse" id="collapse1">
-            <div class="card card-body" style="border-color: black;">
-                東西放這邊1
+        
+        <div class="col-sm-6">
+            <div class="collapse" id="collapse1">
+                <div class="card card-body" style="border-color: black;" >
+                    <table class="table" >
+                        <thead>
+                            <tr align="center"> 
+                                <th>大寫</th>
+                                <th>小寫</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cllapse1_tbody" align="center"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
+
         <div class="collapse" id="collapse2" style="padding-top: 5px;">
             <div class="card card-body" style="border-color: black;">
-                東西放這邊2
+                <!--東西放這邊2-->
             </div>
         </div>
         <div class="collapse" id="collapse3" style="padding-top: 5px;">
             <div class="card card-body" style="border-color: black;">
-                東西放這邊3
+                <!--東西放這邊3-->
             </div>
         </div>
     </div>

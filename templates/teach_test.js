@@ -1,4 +1,4 @@
-var home_page_path = "index.html";
+var home_page_path = "http://"+window.location.hostname+"/index.php";
 
 // 測驗區變數
 var username,
@@ -410,7 +410,8 @@ function complete(){
 	if (faultornot==1) {
 			window.location.href = "game.html?"+true_false_table.result;
 	}else{
-		window.location.href = home_page_path;
+		console.log(window.location.hostname+home_page_path);
+		window.location.href=home_page_path;
 	}
 
 	
