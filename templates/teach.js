@@ -34,8 +34,8 @@ function update_content() {
 			lowercase.innerHTML = teach_json1.lowercase[no_part1[part1_num]];
 			capital_vocabulary_c.innerHTML = teach_json1.cwords[no_part1[part1_num]];
 			capital_vocabulary_v.innerHTML = teach_json1.vwords[no_part1[part1_num]];
-			capital_nounce.src = "audio/teach/"+teach_json1.capital[no_part1[part1_num]]+".mp3";
-			capital_vocabulary_img.src = "PIC/teach/"+teach_json1.cwords[no_part1[part1_num]]+".jpg";
+			capital_nounce.src = "templates/audio/teach/"+teach_json1.capital[no_part1[part1_num]]+".mp3";
+			capital_vocabulary_img.src = "templates/PIC/teach/"+teach_json1.cwords[no_part1[part1_num]]+".jpg";
 
 			if(part1_num==no_part1.length-1){
 				complete_btn.style.display="block";
@@ -49,8 +49,8 @@ function update_content() {
 		lowercase.innerHTML = teach_json1.lowercase[num];
 		capital_vocabulary_c.innerHTML = teach_json1.cwords[num];
 		capital_vocabulary_v.innerHTML = teach_json1.vwords[num];
-		capital_nounce.src = "audio/teach/"+teach_json1.capital[num]+".mp3";
-		capital_vocabulary_img.src = "PIC/teach/"+teach_json1.cwords[num]+".jpg";
+		capital_nounce.src = "templates/audio/teach/"+teach_json1.capital[num]+".mp3";
+		capital_vocabulary_img.src = "templates/PIC/teach/"+teach_json1.cwords[num]+".jpg";
 
 		if(num==28){
 			complete_btn.style.display="block";
@@ -98,7 +98,7 @@ function pre_page(){
 }
 
 function complete(){
-	window.location.href = "teach_test.html";
+	window.location.href = "teach_test.php";
 }
 
 

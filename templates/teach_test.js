@@ -43,7 +43,7 @@ var username,
 	part2_commit_btn
 	;
 //audio路徑 
-var audio_path = "audio/normtest/";
+var audio_path = "templates/audio/normtest/";
 //測驗結束後變數
 var  thank_zone,
 	result_tbody,
@@ -408,7 +408,7 @@ function complete(){
 			faultornot=1;
 	}
 	if (faultornot==1) {
-			window.location.href = "game.html?"+true_false_table.result;
+			window.location.href = "game.php?"+true_false_table.result;
 	}else{
 		console.log(window.location.hostname+home_page_path);
 		window.location.href=home_page_path;
