@@ -6,5 +6,5 @@
 
     session_destroy();
 
-    header("Location: normtest.php");
+    header("Location: index.php");
 ?>

@@ -48,7 +48,7 @@
             /*
             /登入後的頁面，index.php暫時改到normtest.php
             */
-            header("Location: normtest.php");
+            header("Location: index.php");
 
         }
         else{
