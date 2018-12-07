@@ -287,7 +287,14 @@ window.onload=function(){
                 rectager.splice(pressobj,1);
                 // target.splice(collision_dst,1);
                 target[collision_dst].filltext=1;
+            }else{
+                // 碰撞錯誤 也要放回去
+                console.log("no_collision");
+                console.log("pressobj : oldx:"+old.x+",oldy"+old.y);
+                rectager[pressobj].x=old.x;
+                rectager[pressobj].y=old.y;
             }
+            
         }else{
             // 配對失敗，音檔回去
             console.log("no_collision");
