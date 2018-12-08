@@ -1,6 +1,6 @@
 var capital_json = {"capital":["A","Ă","Â","E","Ê","I","O","Ô","Ơ","U","Ư"]}
 var lowercase_json = {"lowercase":["a","ă","â","e","ê","i","o","ô","ơ","u","ư"]};
-var playaudio_icon_path = "PIC/game/playaudio.jpg";
+var playaudio_icon_path = "templates/PIC/game/playaudio.jpg";
 
 var source_para = [
     {word:"A",x:40,y:660},
@@ -57,8 +57,8 @@ var target_para = [
 
 var context;
 var pressobj,collision_dst;
-var audio_path = "audio/teach/";
-var background_path = "PIC/game/tree_background.jpg";
+var audio_path = "templates/audio/teach/";
+var background_path = "templates/PIC/game/tree_background.jpg";
 var test_result;
 var old = {x:0,y:0};
 
@@ -288,7 +288,7 @@ window.onload=function(){
                 // target.splice(collision_dst,1);
                 target[collision_dst].filltext=1;
             }else{
-                // 碰撞錯誤 也要放回去
+                // 碰到也要回去
                 console.log("no_collision");
                 console.log("pressobj : oldx:"+old.x+",oldy"+old.y);
                 rectager[pressobj].x=old.x;
@@ -329,7 +329,7 @@ window.onload=function(){
 
 function complete(){
     
-    window.location.href = "teach.html?"+test_result;
+    window.location.href = "teach.php?"+test_result;
 
 }
 

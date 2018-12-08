@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="game.js"></script>
-	
+	<script type="text/javascript" src="templates/game.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
+    <link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
 
     <title>補救遊戲</title>
 </head>
 <body>
-	<div class="container">
+    <ul id="navbar_ul" style="font-family: Microsoft JhengHei" align="center">
+        <li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
+        <li id="navbar_li" style="float:right"><a href="#.php" >說明</a></li>
+        <li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
+        <li id="navbar_li" style="float:right"><a href="{$login}.php" >{$login}</a></li>
+    </ul>
+
+
+	<div class="container" style="padding-top: 30px;">
 		<canvas class="row" id='canvas' width="1000" height="760" style="background: #eee"></canvas>
 		<button id="complete_btn" type="button" class="container btn btn-default" style="font-size: 32px; display: none;" onclick="complete(); ">很棒! 完成</button>
 

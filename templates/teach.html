@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="teach.js"></script>
+	<script type="text/javascript" src="templates/teach.js"></script>
 	
+	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
+    <link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
 
     <title>教學課程</title>
 </head>
 <body>
-	<div class="container">
+
+	<ul id="navbar_ul" style="font-family: Microsoft JhengHei" align="center">
+		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
+		<li id="navbar_li" style="float:right"><a href="#.php" >說明</a></li>
+		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
+		<li id="navbar_li" style="float:right"><a href="{$login}.php" >{$login}</a></li>
+	</ul>
+
+	<div class="container" style="padding-top: 30px;">
 		<!-- 教學內容 -->
 		<div class="row">
 			<div class="col-md-2 col-md-offset-3" style="padding-top: 25px; ">
@@ -29,7 +39,7 @@
 				
 			</div>
 			<div class="col-md-5"> 
-				<img id="capital_vocabulary_img" class="col-md-5" style="height: 150px; ">
+				<img id="capital_vocabulary_img" class="col-md-5" style="height: 150px; "></img>
 				<p id="capital_vocabulary_c" style="font-size: 32px; padding-top: 20px; padding-bottom: 0px;margin-bottom: 0px;">單字</p>
 				<p id="capital_vocabulary_v" style="font-size: 32px;">a</p>
 			</div>

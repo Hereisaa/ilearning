@@ -26,8 +26,8 @@ function update_content() {
 	lowercase.innerHTML = teach_json1.lowercase[num];
 	capital_vocabulary_c.innerHTML = teach_json1.cwords[num];
 	capital_vocabulary_v.innerHTML = teach_json1.vwords[num];
-	capital_nounce.src = "audio/teach/"+teach_json1.capital[num]+".mp3";
-	capital_vocabulary_img.src = "PIC/teach/"+teach_json1.cwords[num]+".jpg";
+	capital_nounce.src = "templates/audio/teach/"+teach_json1.capital[num]+".mp3";
+	capital_vocabulary_img.src = "templates/PIC/teach/"+teach_json1.cwords[num]+".jpg";
 
 	if(num==28){
 		complete_btn.style.display="block";
@@ -53,7 +53,7 @@ function pre_page(){
 }
 
 function complete(){
-	window.location.href = "teach_test.html";
+	window.location.href = "teach_test.php";
 }
 
 var teach_json1 = {
