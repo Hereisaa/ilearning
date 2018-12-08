@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-04 12:50:30
+/* Smarty version 3.1.33, created on 2018-12-08 07:37:42
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c066a06d14917_45497760',
+  'unifunc' => 'content_5c0b66b6466791_25700558',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f0d923602c3f30f5a0134afacafa2f4b0a1b67f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\index.html',
-      1 => 1543924217,
+      1 => 1544250910,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c066a06d14917_45497760 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0b66b6466791_25700558 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
 
@@ -85,17 +85,16 @@ function content_5c066a06d14917_45497760 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 
-    <div class="container" style="font-family: Microsoft JhengHei" align="center">
+    <div class="container" style="font-family: Microsoft JhengHei" align="center" hidden>
         <a href="normtest.php" id="btn_test" type="btn_test" class="btn btn-primary btn-lg btn-block">測驗</a>
     </div>
 
-    <!-- hidden -->
     <div class="container" style="padding-top: 30px;">
         <div class="row">
             <div class="col-sm-6" id="difficult">
                 <h3 style="font-family: Microsoft JhengHei; font-weight: bold;" align="center">程度列表</h3>
                 <div class="list-group" align="center">
-                    <a class="list-group-item list-group-item-action" onclick="teach_page();">字母</a>
+                    <a href="teach.php" class="list-group-item list-group-item-action">字母</a>
                     <a href="#2" class="list-group-item list-group-item-action">日常對話(1)</a>
                     <a href="#3" class="list-group-item list-group-item-action">...</a>
                     <a href="#4" class="list-group-item list-group-item-action">...</a>

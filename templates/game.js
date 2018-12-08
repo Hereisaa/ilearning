@@ -78,7 +78,7 @@ window.onload=function(){
 
     for (var i = 0; i < source_para.length; i++) {
         rectager[i] = new Rectager();
-        rectager[i].fillStyle = 'red';
+        //rectager[i].fillStyle = 'red';
         rectager[i].audio_src = audio_path+source_para[i].word+".mp3";
         rectager[i].word = source_para[i].word;
         rectager[i].x = source_para[i].x;
