@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-08 07:37:42
+/* Smarty version 3.1.33, created on 2018-12-08 12:47:59
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c0b66b6466791_25700558',
+  'unifunc' => 'content_5c0baf6f165422_44370448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f0d923602c3f30f5a0134afacafa2f4b0a1b67f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\index.html',
-      1 => 1544250910,
+      1 => 1544269663,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c0b66b6466791_25700558 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0baf6f165422_44370448 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
 
@@ -93,11 +93,11 @@ function content_5c0b66b6466791_25700558 (Smarty_Internal_Template $_smarty_tpl)
         <div class="row">
             <div class="col-sm-6" id="difficult">
                 <h3 style="font-family: Microsoft JhengHei; font-weight: bold;" align="center">程度列表</h3>
-                <div class="list-group" align="center">
-                    <a href="teach.php" class="list-group-item list-group-item-action">字母</a>
-                    <a href="#2" class="list-group-item list-group-item-action">日常對話(1)</a>
-                    <a href="#3" class="list-group-item list-group-item-action">...</a>
-                    <a href="#4" class="list-group-item list-group-item-action">...</a>
+                <div class="list-group" align="center" style="font-family: Microsoft JhengHei; font-weight: bold;">
+                    <button  onclick="location.href='teach.php'" class="list-group-item list-group-item-action" style="font-weight: bold;">字母</button>
+                    <button  onclick="location.href='#2'" class="list-group-item list-group-item-action " disabled style="font-weight: bold; background-color: #f9f9faa6;">單字</button >
+                    <button  onclick="location.href='#3'" class="list-group-item list-group-item-action " disabled style="font-weight: bold; background-color: #f9f9faa6;">句型</button >
+                    <button  onclick="location.href='#4'" class="list-group-item list-group-item-action " disabled style="font-weight: bold; background-color: #f9f9faa6;">日常對話</button>
                 </div>
             </div>
 
