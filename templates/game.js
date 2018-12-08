@@ -1,6 +1,9 @@
 var capital_json = {"capital":["A","Ă","Â","E","Ê","I","O","Ô","Ơ","U","Ư"]}
 var lowercase_json = {"lowercase":["a","ă","â","e","ê","i","o","ô","ơ","u","ư"]};
 var playaudio_icon_path = "templates/PIC/game/playaudio.jpg";
+var font_para = "60px Arial";
+var rectager_height = 30,rectager_width = 30;
+
 
 var source_para = [
     {word:"A",x:40,y:660},
@@ -143,8 +146,8 @@ window.onload=function(){
        this.word="";
       this.x = 0;
       this.y = 0;
-      this.width = 30;
-      this.height = 30;
+      this.width = rectager_width;
+      this.height = rectager_height;
       this.fillStyle = "#f85455";
       this.audio_src = "";
       this.filltext = 0;
@@ -154,10 +157,10 @@ window.onload=function(){
       this.draw = function(cxt) {
         cxt.beginPath();
         cxt.fillStyle = this.fillStyle;
-        cxt.font = "50px Arial";
+        cxt.font = font_para;
         
         if(this.showtext==1){
-            cxt.fillRect(this.x,this.y,this.width,this.height);
+            //cxt.fillRect(this.x,this.y,this.width,this.height);//目標方塊(綠色)
             if(this.filltext==1)
                 cxt.fillText(this.word,this.x,this.y);
             else
@@ -262,7 +265,7 @@ window.onload=function(){
             aw = rectager[pressobj].width;
             ah = rectager[pressobj].height;
             bx = target[i].x;
-            by = target[i].y;
+            by = target[i].y-target[i].height;
             bw = target[i].width;
             bh = target[i].height;
 
