@@ -1,7 +1,7 @@
 var capital_json = {"capital":["A","Ă","Â","E","Ê","I","O","Ô","Ơ","U","Ư"]}
 var lowercase_json = {"lowercase":["a","ă","â","e","ê","i","o","ô","ơ","u","ư"]};
 var playaudio_icon_path = "templates/PIC/game/playaudio.jpg";
-var font_para = "60px Arial";
+var font_para = "bold 60px Arial";
 var rectager_height = 30,rectager_width = 30;
 
 
@@ -158,13 +158,16 @@ window.onload=function(){
         cxt.beginPath();
         cxt.fillStyle = this.fillStyle;
         cxt.font = font_para;
+
         
         if(this.showtext==1){
             //cxt.fillRect(this.x,this.y,this.width,this.height);//目標方塊(綠色)
             if(this.filltext==1)
                 cxt.fillText(this.word,this.x,this.y);
-            else
+            else{
+                cxt.lineWidth = 3;
                 cxt.strokeText(this.word,this.x,this.y);
+            }
         }
         if(this.showimage==1){
             image = new Image();
