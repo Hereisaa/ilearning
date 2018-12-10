@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-10 04:15:16
+/* Smarty version 3.1.33, created on 2018-12-10 10:47:23
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\teach_test.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c0dda441d1894_42526731',
+  'unifunc' => 'content_5c0e362b6966c1_18291414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e24d8635dbc35c22456808883323c78472194782' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\teach_test.html',
-      1 => 1544411716,
+      1 => 1544435243,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c0dda441d1894_42526731 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0e362b6966c1_18291414 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -180,8 +180,26 @@ function content_5c0dda441d1894_42526731 (Smarty_Internal_Template $_smarty_tpl)
     	<!-- 作答情形區 -->
     	<div class="container">
     	   	<h3 class="row" style="text-align: center;">測驗結束</h3>
-    	   	<h3 class="row" style="text-align: center;"><strong >答對題數 : <span id="correct_num" style="color: green; font-size: 48;"></span>/28 題</strong></h3>
-    	   	<table class="table" >
+    	   	<h3 class="row" style="text-align: center;"><strong >總答對題數 : <span id="correct_num" style="color: green; font-size: 48;"></span>/28 題</strong></h3>
+
+    	   	<div class="row">
+    	   		<h3 class="col-sm-3 col-sm-offset-4"><strong >單元音 : <span id="correct_unitsound" style="color: green; font-size: 48;"></span>/10 題</strong></h3>
+    	   		<button class="btn col-sm-2" style="font-size: 20; margin-top: 24px;" onclick="complete();">單元音複習</button>
+    	   	</div>
+
+
+    	   	<div class="row">
+    	   		<h3 class="col-sm-3 col-sm-offset-4"><strong >單輔音 : <span id="correct_singleconsonant" style="color: green; font-size: 48;"></span>/10 題</strong></h3>
+    	   		<button class="btn col-sm-2" style="font-size: 20; margin-top: 24px;">單輔音複習</button>
+    	   	</div>
+    	   	
+    	   	<div class="row">
+    	   		<h3 class="col-sm-3 col-sm-offset-4"><strong >雙輔音 : <span id="correct_doubleconsonant" style="color: green; font-size: 48;"></span>/8 題</strong></h3>
+    	   		<button class="btn col-sm-2" style="font-size: 20; margin-top: 24px;">雙輔音複習</button>
+    	   	</div>
+    	   	
+
+    	   	<table class="table col-sm-offset-1" >
 	    		<thead>
 	    			<tr>
 	    				<th>題數</th>

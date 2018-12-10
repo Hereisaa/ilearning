@@ -48,6 +48,9 @@ var audio_path = "templates/audio/normtest/";
 var  thank_zone,
 	result_tbody,
 	correct_num,
+	correct_unitsound,
+	correct_singleconsonant,
+	correct_doubleconsonant,
 	true_false_table = {
 		"student":"tester",
 		"email":"vvv@gmail.com",
@@ -59,7 +62,7 @@ var  thank_zone,
 var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
 window.onload = function(){	
-	// true_false_table.result = [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1];
+	//true_false_table.result = [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1];
 	// console.log(true_false_table.result);
 	//complete();
 	//alert(location);
@@ -117,6 +120,9 @@ window.onload = function(){
 	// 初始測驗結束區
 	thank_zone = document.getElementById("thank_zone");
 	correct_num = document.getElementById("correct_num");
+	correct_unitsound = document.getElementById("correct_unitsound");
+	correct_singleconsonant = document.getElementById("correct_singleconsonant");
+	correct_doubleconsonant = document.getElementById("correct_doubleconsonant");
 	result_tbody = document.getElementById("result_tbody");
 
 	update_content();
@@ -321,6 +327,7 @@ function commitanswer(){
 
 
 function result(){
+	console.log("result : ");
 	var correct = 0;
 
 	for (var i = 0; i <answer_array.length ; i++) {
@@ -379,7 +386,31 @@ function result(){
 			true_false_table.result[i]=0;
 		}
 	}
+
+
+	correct_unitsound_num = 0;
+	correct_singleconsonant_num =0;
+	correct_doubleconsonant_num =0;
+
+	for (var i = 0; i < true_false_table.result.length; i++) {
+		console.log(i);
+		if (i<10 && true_false_table.result[i]==1) {
+			correct_unitsound_num++;
+			console.log(correct_unitsound_num);
+		}
+		if (10<=i && i<20 && true_false_table.result[i]==1) {
+			correct_singleconsonant_num++;
+		}
+		if (20<=i && i<28 && true_false_table.result[i]==1) {
+			correct_doubleconsonant_num++;
+		}
+	}
+
 	correct_num.innerHTML = correct;
+	correct_unitsound.innerHTML = correct_unitsound_num;
+	correct_singleconsonant.innerHTML = correct_singleconsonant_num;
+	correct_doubleconsonant.innerHTML = correct_doubleconsonant_num;
+
 	// alert最後結果 0或1
 	//alert(true_false_table.result);
 

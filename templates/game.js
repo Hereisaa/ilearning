@@ -19,17 +19,17 @@ var source_para = [
     {word:"Ư",x:840,y:660}
     ]
 var target_para = [
-    {word:"A",x:140,y:180},
+    {word:"A",x:105,y:200},
     {word:"Ă",x:260,y:180},
-    {word:"Â",x:380,y:180},
+    {word:"Â",x:420,y:100},
     {word:"E",x:500,y:180},
-    {word:"Ê",x:620,y:180},
-    {word:"I",x:740,y:180},
+    {word:"Ê",x:620,y:150},
+    {word:"I",x:780,y:180},
     {word:"O",x:180,y:380},
-    {word:"Ô",x:300,y:380},
-    {word:"Ơ",x:420,y:380},
-    {word:"U",x:540,y:380},
-    {word:"Ư",x:660,y:380}
+    {word:"Ô",x:270,y:300},
+    {word:"Ơ",x:430,y:330},
+    {word:"U",x:660,y:345},
+    {word:"Ư",x:780,y:380}
     ]
 // var source_para = [
 //     {word:"Aa",x:40,y:660},
