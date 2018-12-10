@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-08 16:31:14
+/* Smarty version 3.1.33, created on 2018-12-10 03:36:34
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\game.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c0be3c21b0b61_99378041',
+  'unifunc' => 'content_5c0dd1322d8ab9_31260290',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1ef5a05cc163104cfa0d976ef952258b322c2381' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\game.html',
-      1 => 1544283056,
+      1 => 1544409144,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c0be3c21b0b61_99378041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0dd1322d8ab9_31260290 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@ function content_5c0be3c21b0b61_99378041 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
     <link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
 
-    <title>補救遊戲</title>
+    <title>複習</title>
 </head>
 <body>
     <ul id="navbar_ul" style="font-family: Microsoft JhengHei" align="center">

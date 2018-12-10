@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-27 09:57:40
+/* Smarty version 3.1.33, created on 2018-12-09 12:46:23
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd41a7421cb81_48856433',
+  'unifunc' => 'content_5c0d008f13b649_69390533',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1bf491174a1333326cec2aa1b847433f1e7551ac' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\login.html',
-      1 => 1540627057,
+      1 => 1544270048,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd41a7421cb81_48856433 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0d008f13b649_69390533 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -82,7 +82,7 @@ function content_5bd41a7421cb81_48856433 (Smarty_Internal_Template $_smarty_tpl)
             <div>
                 <input type="submit" name="login" id="login" value="登入" class="btn btn-lg btn-danger" />
                 <!-- 已將location更改，index.php改為normtest.php -->
-                <input type="button" value="返回首頁" onclick="location.href='normtest.php'" class="btn btn-lg btn-danger"/>
+                <input type="button" value="返回首頁" onclick="location.href='index.php'" class="btn btn-lg btn-danger"/>
                 <td><a href="register.php"> 註冊會員 </a></td>
             </div>
             

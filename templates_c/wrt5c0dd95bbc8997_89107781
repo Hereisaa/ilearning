@@ -1,4 +1,27 @@
-<html lang="en">
+<?php
+/* Smarty version 3.1.33, created on 2018-12-10 04:11:23
+  from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\teach_test.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5c0dd95bbc7351_68703099',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e24d8635dbc35c22456808883323c78472194782' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\teach_test.html',
+      1 => 1544411483,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5c0dd95bbc7351_68703099 (Smarty_Internal_Template $_smarty_tpl) {
+?><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +29,15 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="templates/teach_test.js"></script>
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="templates/teach_test.js"><?php echo '</script'; ?>
+>
     	
 	<link rel="stylesheet" type="text/css" href="templates/CSS/mycss.css">
 	<link rel="stylesheet" type="text/css" href="templates/CSS/navbar.css">
@@ -28,7 +57,9 @@
 		<li id="navbar_li"><a class="active" href="index.php" class="nav navbar-inverse" >Home</a></li>
 		<li id="navbar_li" style="float:right"><a href="#.php" >說明</a></li>
 		<li id="navbar_li" style="float:right"><a href="#.php" >管理</a></li>
-		<li id="navbar_li" style="float:right"><a href="{$login}.php" >{$login}</a></li>
+		<li id="navbar_li" style="float:right"><a href="<?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+.php" ><?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+</a></li>
 	</ul>
 		
 	
@@ -149,7 +180,7 @@
     	<!-- 作答情形區 -->
     	<div class="container">
     	   	<h3 class="row" style="text-align: center;">測驗結束</h3>
-    	   	<h3 class="row" style="text-align: center;"><strong >答對題數 : <span id="correct_num" style="color: green; font-size: 48;"></span>/28 題</strong></h3>
+    	   	<h2 class="row" style="text-align: center;"><strong>答對題數 : <span id="correct_num"></span>/28 </strong></h2>
     	   	<table class="table" >
 	    		<thead>
 	    			<tr>
@@ -177,4 +208,5 @@
     	</div>
     </div>
 </body>
-</html>
+</html><?php }
+}

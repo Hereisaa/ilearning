@@ -4,7 +4,7 @@ var home_page_path = "http://"+window.location.hostname+"/index.php";
 var username,
 	download_excel,
 	account,
-	num ,
+	num,
 	pre_page,
 	test_zone,
 	answer_array,
@@ -59,8 +59,9 @@ var  thank_zone,
 var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
 window.onload = function(){	
-	
-	// complete();
+	// true_false_table.result = [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1];
+	// console.log(true_false_table.result);
+	//complete();
 	//alert(location);
 
 	num=1;

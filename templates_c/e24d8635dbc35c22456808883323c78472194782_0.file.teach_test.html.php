@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-08 07:42:19
+/* Smarty version 3.1.33, created on 2018-12-10 04:15:16
   from 'D:\xampp\htdocs\awei_ilearning\ilearning\templates\teach_test.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c0b67cb4d16d8_21161723',
+  'unifunc' => 'content_5c0dda441d1894_42526731',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e24d8635dbc35c22456808883323c78472194782' => 
     array (
       0 => 'D:\\xampp\\htdocs\\awei_ilearning\\ilearning\\templates\\teach_test.html',
-      1 => 1544250910,
+      1 => 1544411716,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c0b67cb4d16d8_21161723 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0dda441d1894_42526731 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -179,8 +179,8 @@ function content_5c0b67cb4d16d8_21161723 (Smarty_Internal_Template $_smarty_tpl)
     <div id="thank_zone" class="container" style="display: none; ">
     	<!-- 作答情形區 -->
     	<div class="container">
-    	   	<h2 class="row">感謝您的參與 </h2>
-    	   	<h3 class="row">答對題數 : <span id="correct_num"></span>/28</h3>
+    	   	<h3 class="row" style="text-align: center;">測驗結束</h3>
+    	   	<h3 class="row" style="text-align: center;"><strong >答對題數 : <span id="correct_num" style="color: green; font-size: 48;"></span>/28 題</strong></h3>
     	   	<table class="table" >
 	    		<thead>
 	    			<tr>
@@ -202,7 +202,7 @@ function content_5c0b67cb4d16d8_21161723 (Smarty_Internal_Template $_smarty_tpl)
 
 			<!-- 回到index.html 並輸出excel-->
 			<form id="myform" method="POST">
-				<input type="button" value="完成，進入補救課程" class="btn btn-primary" onclick="complete();" ><br />
+				<input type="button" value="開始複習" class="btn btn-primary" onclick="complete();" ><br />
 			</form>
     		
     	</div>
